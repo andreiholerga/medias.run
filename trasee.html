@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trasee | Binderbubi Running</title>
+    <link rel="stylesheet" href="style.css?v=10" />
+    <link rel="icon" type="image/png" href="/logo/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Stiluri specifice pentru galeria din cardul de traseu */
+      .route-gallery {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        background: #eee;
+      }
+      .route-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      .route-slide.active {
+        display: block;
+      }
+      .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 5;
+      }
+      .prev-arrow {
+        left: 0;
+      }
+      .next-arrow {
+        right: 0;
+      }
+
+      /* Stil pentru Load More Text */
+      .description-container {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      .long-description {
+        height: 60px;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        color: var(--text-dim);
+      }
+      .long-description.expanded {
+        height: auto;
+      }
+      .btn-load-more {
+        background: none;
+        border: none;
+        color: var(--primary);
+        font-weight: 700;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+
+      /* Grid ajustat pentru Trasee */
+      .routes-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+      }
+    </style>
+  </head>
+  <body class="subpage">
+    <header>
+      <div class="container nav-container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="logo/logo.webp" alt="Logo" rel="preload"
+          /></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="main-nav" id="main-nav">
+          <a href="index.html">Acasă</a>
+          <a href="index.html#despre-noi">Despre Noi</a>
+          <a href="index.html#proiecte">Proiecte</a>
+          <a href="trasee.html">Trasee</a>
+          <a href="faq.html">FAQ</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container">
+      <h1 class="section-title">
+        TRASEE <span class="highlight">RECOMANDATE</span>
+      </h1>
+
+      <div class="routes-container">
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/1/1.webp"
+              class="route-slide active"
+              alt="Traseu 1"
+            />
+            <img
+              src="images/trasee/1/2.webp"
+              class="route-slide"
+              alt="Traseu 1"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">5.1 KM • TRAIL</div>
+          <h3>Traseu #1</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Traseul de alergare propus, cu o lungime de 5,10 km și o diferență
+              de nivel pozitivă de 164 m, reprezintă o experiență captivantă
+              pentru iubitorii de mișcare în natură. Timpul estimat pentru
+              parcurgere este de 45-60 de minute, în funcție de ritmul și
+              condiția fizică a fiecărui alergător.
+              <br /><br />
+              <h4>Detalii traseu:</h4>
+              • Suprafață: Aproximativ 10% asfalt, în principal pe segmentele de
+              acces și ieșire din oraș, iar restul de 90% constă din drumuri
+              pietruite și cărări care șerpuiesc prin pădure, oferind o alergare
+              plăcută, departe de agitația urbană.
+              <br />
+              • Punct de belvedere: De-a lungul traseului, vei întâlni un punct
+              spectaculos de belvedere, care oferă o panoramă impresionantă
+              asupra orașului Mediaș. Este locul ideal pentru o pauză scurtă sau
+              pentru a surprinde câteva imagini memorabile. <br />• Segment pe
+              Via Transilvanica: O porțiune a traseului se desfășoară pe
+              renumitul drum de drumeție Via Transilvanica, adăugând o notă
+              specială și autentică alergării tale. <br /><br />
+              <h4>Descriere pe scurt:</h4>
+              Traseul începe într-o zonă accesibilă din apropierea orașului
+              Mediaș, cu o scurtă secțiune pe asfalt, înainte de a trece pe
+              drumuri pietruite și poteci prin pădure. Panta ascendentă moderată
+              îți va testa condiția fizică, iar efortul este răsplătit cu
+              priveliștea spectaculoasă de la punctul de belvedere. Încheierea
+              traseului te readuce pe un segment confortabil, înapoi spre
+              punctul de plecare.
+              <br /><br />
+              <h4>Recomandări:</h4>
+              • Potrivit pentru alergătorii cu un nivel mediu de pregătire, dar
+              poate fi parcurs și într-un ritm mai lejer, ca drumeție.
+              <br />
+              • Echipament recomandat: încălțăminte de trail pentru aderență
+              sporită pe teren variat. <br />
+              • Opțional: un aparat foto sau telefon pentru imortalizarea
+              peisajului de la punctul de belvedere. Acest traseu combină
+              natura, provocarea fizică și peisajele deosebite, fiind ideal
+              pentru o experiență activă în aer liber. Timpul estimat de
+              parcurgere este între 45 și 60 de minute, în funcție de ritmul și
+              pauzele luate pe traseu. In speranta ca pozele de pe traseu v-au
+              starnit curiozitatea si dorinta de va testa rezistenta pe acest
+              traseu, va astept cu drag, in data de 18.01.2025, la ora 11:00, pe
+              platoul din fata “Partiei de sanie” aflat la 400 de m de intrarea
+              in parcarea Hotelului Mercur.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/1.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/2/1.webp"
+              class="route-slide active"
+              alt="Traseu 2"
+            />
+            <img
+              src="images/trasee/2/2.webp"
+              class="route-slide"
+              alt="Traseu 2"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">7.15 KM • TRAIL</div>
+          <h3>Traseu #2</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Distanță totală: 7,15 km
+              <br />Diferență de nivel: +48 m <br />Suprafață: 100% drum de
+              pământ <br />Traseu pe dig: 90% <br />Punct de plecare: Pasarela
+              <br /><br />Acest traseu de alergare începe de la Pasarela, un
+              punct de referință accesibil și bine cunoscut din zonă. Traseul
+              urmează în mare parte digul Târnavei Mari, oferind o experiență
+              autentică pe drumuri de pământ, într-un cadru natural liniștit și
+              pitoresc. <br /><br />
+              <h4>Caracteristici principale:</h4>
+              1. Suprafața traseului:
+              <br />Întreg traseul se desfășoară pe drum de pământ, ideal pentru
+              alergătorii care doresc să evite suprafețele dure. Este perfect
+              pentru antrenamente de anduranță sau alergări relaxante. <br />
+              2. Profilul traseului: <br />Diferența pozitivă de nivel de 48 m
+              este ușor de gestionat, cu urcări blânde, ceea ce face traseul
+              potrivit pentru alergători de toate nivelurile. Ritmul poate fi
+              menținut constant pe toată lungimea traseului. <br />
+              3. Digul Târnavei Mari: <br />Aproximativ 90% din traseu urmează
+              digul râului, asigurând un parcurs clar și bine definit. <br />
+              4. Întoarcerea: <br />Traseul se poate închide sub formă de buclă
+              sau cu întoarcere pe aceeași rută, în funcție de preferințele
+              alergătorilor. <br /><br />
+              <h4>Recomandări:</h4>
+              • Echipament: Încălțămintea de trail este cea mai potrivită pentru
+              aderență optimă.
+              <br />
+              • Hidratare: Luați apă, deoarece traseul nu include puncte de
+              alimentare. <br />
+              • Siguranță: După ploi, pot apărea porțiuni mai alunecoase pe dig,
+              de aceea este bine să aveți grijă la pași. <br /><br />
+              <h4>Concluzie:</h4>
+              Începând de la Pasarela, acest traseu pe digul Târnavei Mari este
+              ideal pentru o alergare relaxantă sau antrenamente constante,
+              oferind un echilibru între efort fizic și frumusețea naturii.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/2.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/3/1.webp"
+              class="route-slide active"
+              alt="Traseu 3"
+            />
+            <img
+              src="images/trasee/3/2.webp"
+              class="route-slide"
+              alt="Traseu 3"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">7.4 KM • ROAD</div>
+          <h3>Traseu #3</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Traseul constă în două ture identice de câte 3,7 km fiecare, cu
+              plecarea din parcarea magazinului Penny. Suprafața este complet
+              asfaltată (100% șosea) și urmează pista de biciclete care duce
+              către capătul liniei de troleibuz. Traseul este aproape plat, cu o
+              diferență de nivel de doar 28 m, ideal pentru alergători de toate
+              nivelurile.
+              <br /><br />
+              <h4>Detalii traseu:</h4>
+              1. Startul:
+              <br />• Startul se face din parcarea magazinului Penny. <br />2.
+              Prima secțiune (0 - 1,5 km): <br />• Alergarea începe pe pista de
+              biciclete, urmând drumul asfaltat către Helesteu. <br />•
+              Suprafața este netedă, fără obstacole, iar traficul este moderat.
+              <br />3. Zona de întoarcere (1,5 - 3,7 km): <br />• Se continuă
+              alergarea până în capătul liniei de troleibuz. <br />• Aici, se
+              efectuează întoarcerea, traseul urmând aceeași pistă de biciclete
+              spre punctul de start. <br />4. A doua tură: <br />• După ce se
+              încheie prima buclă de 3,7 km, se reia traseul pentru încă o tură
+              identică. <br />5. Sosirea: <br />• Sosirea are loc tot în
+              parcarea magazinului Penny, după parcurgerea celor două ture.
+              <br /><br />
+              <h4>Aspecte logistice:</h4>
+              • Hidratare: Asigurați-vă că aveți apă disponibilă în parcare,
+              deoarece traseul nu include puncte de hidratare.
+              <br />• Siguranță: Traseul este pe drum asfaltat, asigurați-vă că
+              respectați regulile de circulație pe pista de biciclete. <br />•
+              Ritm: Terenul aproape plat este ideal pentru menținerea unui ritm
+              constant sau pentru alergări de viteză.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/3.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/4/1.webp"
+              class="route-slide active"
+              alt="Traseu 4"
+            />
+            <img
+              src="images/trasee/4/2.webp"
+              class="route-slide"
+              alt="Traseu 4"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">7.8 KM • ROAD</div>
+          <h3>Traseu #4</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Lungime traseu: 7,8 km (dus-întors)
+              <br />Diferență de nivel: 73 m <br />Suprafață: 100% asfalt
+              <br />Dificultate: Ușor, potrivit pentru alergători de toate
+              nivelurile și practicabil pe orice vreme. <br /><br />
+              <h4>Detalii traseu:</h4>
+              • Punct de plecare și final: Parcarea Barajului Lacului Ighiș.
+              <br />
+              • Traseul: <br />Traseul urmează pista de biciclete asfaltată,
+              având o lungime de aproximativ 3,9 km până la intrarea în
+              localitatea Ighiș, după care se revine pe același drum la punctul
+              de plecare. Traseul este caracterizat de o alternanță de urcări și
+              coborâri ușoare în ambele direcții, oferind un antrenament plăcut
+              și variat. <br />
+              • Peisaj: <br />Pista traversează o zonă cu multă verdeață, cu
+              peisaje naturale care oferă o atmosferă relaxantă. Este ideal
+              pentru alergători care doresc să se bucure de natură în timp ce se
+              antrenează. <br />
+              • Lungime totală: 7,8 km (3,9 km dus + 3,9 km întors).
+              <br /><br />
+              <h4>Recomandări:</h4>
+              • Potrivit pentru alergători începători și avansați, fie pentru
+              antrenamente ușoare, fie pentru sesiuni mai intense.
+              <br />
+              • Suprafața asfaltată și întreținerea bună fac traseul accesibil
+              în orice condiții meteorologice. <br />
+              • Ritmul poate fi ajustat în funcție de nivelul de dificultate
+              dorit, iar peisajele naturale contribuie la menținerea motivației.
+              <br /><br />Acest traseu dus-întors este ideal pentru alergători
+              care caută o combinație între mișcare, relaxare și peisaje
+              plăcute.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/4.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/5/1.webp"
+              class="route-slide active"
+              alt="Traseu 5"
+            />
+            <img
+              src="images/trasee/5/2.webp"
+              class="route-slide"
+              alt="Traseu 5"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">4.8 KM • ROAD</div>
+          <h3>Traseu #5</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Distanță totală: 7,15 km
+              <br />Traseul Stadion-Greweln este un circuit de 4,8 km cu o
+              diferență de nivel de 100 m, potrivit pentru alergare sau
+              plimbare. Traseul este integral asfaltat și pe alei betonate,
+              fiind accesibil și ușor de parcurs. <br /><br />
+              <h4>Detalii traseu:</h4>
+              1. Punct de plecare: Strada Stadionului, în fața Clubului Sportiv
+              Delphine Mediaș.
+              <br />2. Prima secțiune: Urcare pe aleea ce duce până la Hanul
+              Greweln. Această porțiune include mici pante care oferă un bun
+              antrenament. <br />3. A doua secțiune: Coborâre pe lângă șosea,
+              revenind spre stadion. <br />4. Circuit repetat: După completarea
+              primei bucle, circuitul se repetă o dată. <br />5. Finalizare
+              traseu: La finalul celei de-a doua bucle, întoarcerea se face la
+              punctul de plecare. <br /><br />
+              <h4>Peisaj:</h4>
+              Zona este frumoasă, cu păduri în apropiere care oferă umbră și un
+              cadru plăcut. Traseul include porțiuni ușor înclinate, perfecte
+              pentru un antrenament moderat. Este ideal atât pentru începători,
+              cât și pentru cei care doresc să se mențină activi într-un mediu
+              relaxant.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/5.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/6/1.webp"
+              class="route-slide active"
+              alt="Traseu 6"
+            />
+            <img
+              src="images/trasee/6/2.webp"
+              class="route-slide"
+              alt="Traseu 6"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">4.1 KM • ROAD</div>
+          <h3>Traseu #6</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Acest traseu de 4,1 km din Mediaș este ideal pentru alergare,
+              desfășurându-se pe drumuri asfaltate, pavaj din piatră cubică și
+              macadam, atât în interiorul, cât și de-a lungul zidurilor cetății.
+              Cu o diferență de nivel de doar 27 m, oferă un parcurs accesibil,
+              dar variat.
+              <br /><br />Startul și sosirea sunt în fața Casei Schuller, iar pe
+              traseu se pot admira fortificațiile medievale, turnurile de
+              apărare și clădirile istorice ale orașului. Alergarea prin acest
+              decor medieval adaugă o experiență aparte, combinând efortul fizic
+              cu farmecul arhitecturii și al străzilor încărcate de peste 750 de
+              ani de istorie.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/6.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card route-item">
+          <div class="route-gallery">
+            <button class="nav-arrow prev-arrow">&#10094;</button>
+            <img
+              src="images/trasee/7/1.webp"
+              class="route-slide active"
+              alt="Traseu 7"
+            />
+            <img
+              src="images/trasee/7/2.webp"
+              class="route-slide"
+              alt="Traseu 7"
+            />
+            <button class="nav-arrow next-arrow">&#10095;</button>
+          </div>
+
+          <div class="card-tag">21 KM • MIXT</div>
+          <h3>Traseu #7</h3>
+
+          <div class="description-container">
+            <div class="long-description">
+              Tip traseu: Mixt (80% drumuri de pământ, cărări; 20% asfalt)
+              <br />Punct de start/finish: Hotel Mercure (Binderbubi)
+              <br /><br />Traseul începe în fața Hotelului Mercure și urcă pe
+              lângă Trei Stejari, ajungând pe Via Transilvanica. Se urmează
+              acest traseu până la drumul Mediaș – Nemșa, unde se face dreapta
+              către barajul de la Moșna. <br /><br />După traversarea barajului,
+              se continuă cu o urcare susținută pe dealurile de deasupra
+              Ighișului. Traseul urmărește coama dealului, oferind priveliști
+              spectaculoase, până la intersecția Păcii – Tâmpa – Primăverii. De
+              aici, urmează o coborâre pe strada Primăverii, revenind apoi la
+              Hotel Mercure, punctul de start. <br /><br />
+              <h4>Caracteristici traseu:</h4>
+              • Primii kilometri includ o urcare constantă până pe Via
+              Transilvanica.
+              <br />• Porțiunea de drum public Mediaș – Nemșa este relativ
+              ușoară, însă urcarea spre Ighiș poate fi solicitantă. <br />•
+              Ultimii kilometri sunt predominant coborâre, oferind o revenire
+              mai rapidă către punctul de start. <br /><br />Este un traseu
+              variat, cu peisaje frumoase și porțiuni tehnice, ideal pentru
+              alergători care caută o combinație între drumuri de pământ, pădure
+              și porțiuni de asfalt.
+            </div>
+            <button class="btn-load-more">Citește mai mult...</button>
+          </div>
+
+          <div class="card-footer">
+            <a href="trasee/7.gpx" download class="btn-download">
+              <span>⬇</span> DESCARCĂ GPX
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Logica pentru Galeriile Foto Individuale
+      document.querySelectorAll(".route-item").forEach((item) => {
+        const slides = item.querySelectorAll(".route-slide");
+        const nextBtn = item.querySelector(".next-arrow");
+        const prevBtn = item.querySelector(".prev-arrow");
+        let current = 0;
+
+        function showSlide(index) {
+          slides.forEach((s) => s.classList.remove("active"));
+          if (index >= slides.length) current = 0;
+          else if (index < 0) current = slides.length - 1;
+          else current = index;
+          slides[current].classList.add("active");
+        }
+
+        nextBtn.addEventListener("click", () => showSlide(current + 1));
+        prevBtn.addEventListener("click", () => showSlide(current - 1));
+      });
+
+      // Logica pentru Load More Text
+      document.querySelectorAll(".btn-load-more").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const desc = this.previousElementSibling;
+          desc.classList.toggle("expanded");
+          this.textContent = desc.classList.contains("expanded")
+            ? "Arată mai puțin"
+            : "Citește mai mult...";
+        });
+      });
+    </script>
+
+    <footer>
+      <div class="container"><p>&copy; 2026 Binderbubi Running Mediaș.</p></div>
+    </footer>
+    <script src="script.js?version=10"></script>
+  </body>
+</html>
