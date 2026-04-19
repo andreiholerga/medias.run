@@ -2,50 +2,51 @@
 // Binderbubi Backyard Running - Main Script
 // ================================================
 async function loadNavbar() {
-    const navbarContainer = document.getElementById('nav');
-    if (!navbarContainer) return;
+  const navbarContainer = document.getElementById("nav");
+  if (!navbarContainer) return;
 
-    try {
-        const response = await fetch('navbar.html');
-        const navbarHTML = await response.text();
-        navbarContainer.innerHTML = navbarHTML;
+  try {
+    const response = await fetch("navbar.html");
+    const navbarHTML = await response.text();
+    navbarContainer.innerHTML = navbarHTML;
 
-        // Wait a tiny bit for DOM to update
-        setTimeout(() => {
-            initHamburgerMenu();
-        }, 10);
-
-    } catch (error) {
-        console.error('Error loading navbar:', error);
-    }
+    // Wait a tiny bit for DOM to update
+    setTimeout(() => {
+      initHamburgerMenu();
+    }, 10);
+  } catch (error) {
+    console.error("Error loading navbar:", error);
+  }
 }
 
 function initHamburgerMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const mainNav = document.getElementById('main-nav');
-    const overlay = document.getElementById('nav-overlay');
-    const navLinks = document.querySelectorAll('.main-nav a');
+  const hamburger = document.getElementById("hamburger");
+  const mainNav = document.getElementById("main-nav");
+  const overlay = document.getElementById("nav-overlay");
+  const navLinks = document.querySelectorAll(".main-nav a");
 
-    function toggleMenu() {
-        hamburger.classList.toggle('active');
-        mainNav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : 'auto';
-    }
+  function toggleMenu() {
+    hamburger.classList.toggle("active");
+    mainNav.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.style.overflow = mainNav.classList.contains("active")
+      ? "hidden"
+      : "auto";
+  }
 
-    if (hamburger) hamburger.addEventListener('click', toggleMenu);
-    if (overlay) overlay.addEventListener('click', toggleMenu);
+  if (hamburger) hamburger.addEventListener("click", toggleMenu);
+  if (overlay) overlay.addEventListener("click", toggleMenu);
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mainNav.classList.contains('active')) toggleMenu();
-        });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (mainNav.classList.contains("active")) toggleMenu();
     });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-   loadNavbar();
-   
+  loadNavbar();
+
   const imageFolder = "images/";
   const totalImages = 118; // Update this number if you add/remove images
 
@@ -184,15 +185,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const hasHighFived = localStorage.getItem("hasHighFived");
 
     if (hasHighFived === "true") {
-      highFiveBtn.textContent = "👍 Te așteptăm la alergări!";
+      highFiveBtn.innerHTML =
+        '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
       highFiveBtn.disabled = true;
       highFiveBtn.style.background = "#222";
-      highFiveBtn.style.cursor = "default";
       countWrapper.style.opacity = "1";
     } else {
       highFiveBtn.addEventListener("click", async () => {
         // Visual feedback
-        highFiveBtn.textContent = "👍";
+        highFiveBtn.innerHTML =
+          '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
         highFiveBtn.disabled = true;
         highFiveBtn.style.background = "#222";
         countWrapper.style.opacity = "1";
