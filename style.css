@@ -1,7 +1,7 @@
 :root {
   --primary: #ff3e3e; /* Roșu Backyard */
   --bg-body: #ffffff; /* Alb principal */
-  --bg-alt: #f8f9fa; /* Gri deschis pentru secțiuni */
+  --bg-alt: #ffffff; /* Gri deschis pentru secțiuni */
   --text-dark: #111111; /* Negru titluri */
   --text-dim: #222222; /* Gri text secundar */
   --border: #eeeeee; /* Linii subtile */
@@ -31,10 +31,11 @@ body {
 }
 
 .container {
+border-top: 1px solid var(--border);
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 /* ====================== HEADER & NAV ====================== */
@@ -368,6 +369,13 @@ header {
 
 /* ====================== CONTACT & PARTNERS ====================== */
 
+.highfive-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .contact-simple {
   text-align: center;
   background: var(--bg-alt);
@@ -393,7 +401,6 @@ header {
 .parteneri-zona {
   padding: 60px 0;
   background: var(--bg-alt);
-  border-top: 1px solid var(--border);
 }
 
 .parteneri-grid {
