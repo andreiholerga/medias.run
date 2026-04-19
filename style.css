@@ -446,6 +446,12 @@ header {
 .p-link {
   display: block;
   transition: var(--transition);
+  text-decoration: none;
+}
+
+.p-link:link,
+.p-link:visited{
+  color:var(--text-dark);
 }
 
 .p-link img {
