@@ -248,4 +248,14 @@ document.addEventListener("DOMContentLoaded", function () {
     "%cBinderbubi Backyard Running - Script loaded successfully",
     "color: #4CAF50; font-weight: bold;",
   );
+
+  const eventGrid = document.getElementById("eventsGrid");
+  const eventButton = document.getElementById("eventBtn");
+
+  eventButton.addEventListener("click", () => {
+    eventGrid.classList.toggle("expanded");
+    eventButton.textContent = eventGrid.classList.contains("expanded")
+      ? "Vezi mai puține"
+      : "Vezi mai multe";
+  });
 });

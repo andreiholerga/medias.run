@@ -31,11 +31,17 @@ body {
 }
 
 .container {
-border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border);
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ====================== HEADER & NAV ====================== */
@@ -251,7 +257,7 @@ header {
 }
 
 .projects-grid,
-.runners-grid{
+.runners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
@@ -259,8 +265,22 @@ header {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, calc(calc(100% - 90px)/4));
+  grid-template-columns: repeat(auto-fit, calc(calc(100% - 90px) / 4));
   gap: 30px;
+  overflow: hidden;
+  max-height: 45vh;
+  padding-top: 10px;
+}
+
+.events-grid.expanded {
+  max-height: 10000px; /* Large enough to fit all content */
+}
+
+.events-grid h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
 }
 
 .project-card,
@@ -287,7 +307,7 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.runner-card{
+.runner-card {
   padding: 0;
   overflow: hidden;
   cursor: zoom-in;
@@ -317,9 +337,12 @@ header {
 }
 
 .card-date {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: var(--primary);
   font-weight: 900;
-  font-size: 2rems;
+  font-size: 0.9rem;
   display: block;
 }
 
@@ -334,9 +357,9 @@ header {
   margin-top: auto;
   padding-top: 25px;
 }
-.event-card{
-  gap:10px;
-  padding:20px;
+.event-card {
+  gap: 10px;
+  padding: 20px;
 }
 
 /* ====================== SLIDER ====================== */
@@ -390,11 +413,11 @@ header {
 
 /* ====================== CONTACT & PARTNERS ====================== */
 
-.highfive-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+.highfive-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .contact-simple {
@@ -450,8 +473,8 @@ header {
 }
 
 .p-link:link,
-.p-link:visited{
-  color:var(--text-dark);
+.p-link:visited {
+  color: var(--text-dark);
 }
 
 .p-link img {
@@ -571,9 +594,9 @@ footer {
 /* ====================== RESPONSIVE ====================== */
 
 @media (max-width: 900px) {
-.events-grid {
-  grid-template-columns: repeat(auto-fit, calc(calc(100% - 60px)/3));
-}
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, calc(calc(100% - 60px) / 3));
+  }
 
   .slider-container {
     height: 450px;
@@ -587,8 +610,8 @@ footer {
 
 @media (max-width: 768px) {
   .events-grid {
-  grid-template-columns: repeat(auto-fit, calc(calc(100% - 30px)/2));
-}
+    grid-template-columns: repeat(auto-fit, calc(calc(100% - 30px) / 2));
+  }
 
   .slider-container {
     height: 250px;
