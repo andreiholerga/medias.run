@@ -7,6 +7,7 @@
   --text-dim: #222222; /* Gri text secundar */
   --border: #eeeeee; /* Linii subtile */
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --event-gap: 10px;
 }
 
 /* ====================== RESET & BASE ====================== */
@@ -267,8 +268,11 @@ header {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, calc(calc(100% - 90px) / 4));
-  gap: 30px;
+  grid-template-columns: repeat(
+    auto-fit,
+    calc(calc(100% - (3 * var(--event-gap))) / 4)
+  );
+  gap: var(--event-gap);
   overflow: hidden;
   max-height: 45vh;
   padding-top: 10px;
@@ -309,7 +313,7 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.event-partener h3{
+.event-partener h3 {
   text-align: center;
   font-size: 1.5em;
 }
@@ -353,7 +357,7 @@ header {
   display: block;
 }
 
-.event-partener .card-date{
+.event-partener .card-date {
   color: var(--primary);
 }
 
@@ -373,14 +377,14 @@ header {
   padding: 13px;
 }
 
-.card-top{
-  height: max(min(14vw,6vh),60px);
+.card-top {
+  height: max(min(14vw, 6vh), 60px);
   gap: 5px;
   display: grid;
 }
 
-.event-partener .card-top{
-  gap:0;
+.event-partener .card-top {
+  gap: 0;
 }
 
 .event-partener {
@@ -389,7 +393,7 @@ header {
   animation-name: borderAnimation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  padding:5px;
+  padding: 5px;
 }
 
 /* ====================== SLIDER ====================== */
@@ -640,7 +644,10 @@ footer {
 
 @media (max-width: 900px) {
   .events-grid {
-    grid-template-columns: repeat(auto-fit, calc(calc(100% - 60px) / 3));
+    grid-template-columns: repeat(
+      auto-fit,
+      calc(calc(100% - (2 * var(--event-gap))) / 3)
+    );
   }
 
   .main-nav {
@@ -669,7 +676,6 @@ footer {
     border-bottom: 1px solid #f0f0f0;
     font-size: 1.1rem;
   }
-
 
   .main-nav.active {
     right: 0;
@@ -700,7 +706,10 @@ footer {
 
 @media (max-width: 768px) {
   .events-grid {
-    grid-template-columns: repeat(auto-fit, calc(calc(100% - 30px) / 2));
+    grid-template-columns: repeat(
+      auto-fit,
+      calc(calc(100% - var(--event-gap)) / 2)
+    );
   }
 
   .slider-container {
