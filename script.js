@@ -188,7 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
       highFiveBtn.innerHTML =
         '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
       highFiveBtn.disabled = true;
-      highFiveBtn.style.background = "#222";
       countWrapper.style.opacity = "1";
     } else {
       highFiveBtn.addEventListener("click", async () => {
@@ -196,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
         highFiveBtn.innerHTML =
           '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
         highFiveBtn.disabled = true;
-        highFiveBtn.style.background = "#222";
         countWrapper.style.opacity = "1";
 
         try {

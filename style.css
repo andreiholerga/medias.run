@@ -1,7 +1,8 @@
 :root {
   --primary: #ff3e3e; /* Roșu Backyard */
+  --primary-faded: #ff7878;
   --bg-body: #ffffff; /* Alb principal */
-  --bg-alt: #ffffff; /* Gri deschis pentru secțiuni */
+  --bg-alt: #e2e2e2; /* Gri deschis pentru secțiuni */
   --text-dark: #111111; /* Negru titluri */
   --text-dim: #222222; /* Gri text secundar */
   --border: #eeeeee; /* Linii subtile */
@@ -42,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /* ====================== HEADER & NAV ====================== */
@@ -280,14 +282,14 @@ header {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .project-card,
 .route-card,
 .runner-card,
 .event-card {
-  background: var(--bg-alt);
+  background: var(--bg-body);
   padding: 45px;
   text-decoration: none;
   color: inherit;
@@ -305,6 +307,11 @@ header {
   border-color: var(--primary);
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.event-partener h3{
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .runner-card {
@@ -340,10 +347,14 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--primary);
+  color: var(--primary-faded);
   font-weight: 900;
   font-size: 0.9rem;
   display: block;
+}
+
+.event-partener .card-date{
+  color: var(--primary);
 }
 
 .btn-text {
@@ -359,7 +370,26 @@ header {
 }
 .event-card {
   gap: 10px;
-  padding: 20px;
+  padding: 13px;
+}
+
+.card-top{
+  height: max(min(14vw,6vh),60px);
+  gap: 5px;
+  display: grid;
+}
+
+.event-partener .card-top{
+  gap:0;
+}
+
+.event-partener {
+  border-width: 8px;
+  border-style: groove;
+  animation-name: borderAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  padding:5px;
 }
 
 /* ====================== SLIDER ====================== */
@@ -422,7 +452,7 @@ header {
 
 .contact-simple {
   text-align: center;
-  background: var(--bg-alt);
+  background: var(--bg-body);
   padding: 60px 20px;
   border-radius: 4px;
 }
@@ -444,7 +474,7 @@ header {
 
 .parteneri-zona {
   padding: 60px 0;
-  background: var(--bg-alt);
+  background: var(--bg-body);
 }
 
 .parteneri-grid {
@@ -490,7 +520,7 @@ header {
 /* ====================== FAQ ====================== */
 
 .subpage {
-  background: var(--bg-alt);
+  background: var(--bg-body);
 }
 
 .faq-item {
@@ -568,6 +598,21 @@ footer {
   }
 }
 
+@keyframes borderAnimation {
+  0% {
+    border-color: #ffc2c2;
+    background-color: var(--bg-body);
+  }
+  50% {
+    border-color: var(--primary);
+    background-color: #ffefb1;
+  }
+  100% {
+    border-color: #ffc2c2;
+    background-color: var(--bg-body);
+  }
+}
+
 /* ====================== HAMBURGER & MOBILE NAV ====================== */
 
 .hamburger {
@@ -596,6 +641,51 @@ footer {
 @media (max-width: 900px) {
   .events-grid {
     grid-template-columns: repeat(auto-fit, calc(calc(100% - 60px) / 3));
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    gap: 15px;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.1rem;
+  }
+
+
+  .main-nav.active {
+    right: 0;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .hamburger {
+    display: flex;
   }
 
   .slider-container {
@@ -635,56 +725,17 @@ footer {
     display: block;
   }
 
-  .hamburger {
-    display: flex;
-  }
-
-  .main-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 80px;
-    gap: 15px;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1050;
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .main-nav a {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 1.1rem;
-  }
-
-  .main-nav.active {
-    right: 0;
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-
   .parteneri-grid {
     gap: 30px;
   }
 
   .p-link img {
     height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .events-grid {
+    grid-template-columns: repeat(auto-fit, 100%);
   }
 }
