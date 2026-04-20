@@ -294,7 +294,7 @@ header {
 .runner-card,
 .event-card {
   background: var(--bg-body);
-  padding: 45px;
+  padding: 25px;
   text-decoration: none;
   color: inherit;
   border: 1px solid var(--border);
@@ -512,7 +512,7 @@ header {
 }
 
 .p-link img {
-  height: 50px;
+  height: 5vmin;
   width: auto;
   display: block;
 }
@@ -590,6 +590,151 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+/*trasee*/
+/* Stiluri specifice pentru galeria din cardul de traseu */
+      .route-gallery {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        background: #eee;
+      }
+      .route-slide {
+        
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+      .route-slide.active {
+        display: block;
+      }
+      .nav-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 5;
+      }
+      .prev-arrow {
+        left: 0;
+      }
+      .next-arrow {
+        right: 0;
+      }
+
+      /* Stil pentru Load More Text */
+      .description-container {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      .long-description {
+        height: 60px;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        color: var(--text-dim);
+      }
+      .long-description.expanded {
+        height: auto;
+      }
+      .btn-load-more {
+        background: none;
+        border: none;
+        color: var(--primary);
+        font-weight: 700;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+
+      /* Grid ajustat pentru Trasee */
+      .routes-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          calc(calc(100% - (3 * var(--event-gap))) / 4)
+        );
+        gap: var(--event-gap);
+      }
+
+/* Autism24h */
+
+.cause-header {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80&w=1500");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 80px 0 80px;
+      }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .stat-box {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .stat-box h2 {
+        color: var(--primary);
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+      }
+
+      .donation-card {
+        background: var(--bg-alt);
+        padding: 40px;
+        border-radius: 4px;
+        border-left: 8px solid var(--primary);
+        margin-top: 40px;
+      }
+      .km-logic {
+        background: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        margin: 20px 0;
+        display: inline-block;
+        border: 1px dashed var(--primary);
+      }
+      .progress-bar-container {
+        background: #ddd;
+        height: 25px;
+        border-radius: 15px;
+        margin: 20px 0;
+        overflow: hidden;
+        position: relative;
+      }
+      .progress-fill {
+        background: var(--primary);
+        height: 100%;
+        width: 20%;
+        transition: width 2s ease-out;
+      }
+      .progress-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        line-height: 25px;
+        color: #000;
+        font-weight: 900;
+        font-size: 0.8rem;
+      }
+
+/*Animations*/
 
 @keyframes zoomIn {
   from {
@@ -642,7 +787,15 @@ footer {
 
 /* ====================== RESPONSIVE ====================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+  .routes-container {
+        grid-template-columns: repeat(
+          auto-fit,
+          calc(calc(100% - (1 * var(--event-gap))) / 2)
+    );
+  }
+
   .events-grid {
     grid-template-columns: repeat(
       auto-fit,
@@ -705,6 +858,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .routes-container{
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
   .events-grid {
     grid-template-columns: repeat(
       auto-fit,
@@ -746,7 +902,7 @@ footer {
 }
 
 @media (max-width: 400px) {
-  .events-grid {
+  .events-grid{
     grid-template-columns: repeat(auto-fit, 100%);
   }
 }
