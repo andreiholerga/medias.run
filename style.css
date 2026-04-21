@@ -790,7 +790,7 @@ footer {
   .routes-container {
     grid-template-columns: repeat(
       auto-fit,
-      calc(calc(100% - (1 * var(--event-gap))) / 2)
+      calc(calc(100% - (2 * var(--event-gap))) / 3)
     );
   }
 
@@ -856,9 +856,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .routes-container {
-    grid-template-columns: repeat(auto-fit, 100%);
-  }
+
   .events-grid {
     grid-template-columns: repeat(
       auto-fit,
@@ -898,6 +896,9 @@ footer {
 }
 
 @media (max-width: 400px) {
+    .routes-container {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
   .events-grid {
     grid-template-columns: repeat(auto-fit, 100%);
   }

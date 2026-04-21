@@ -27,7 +27,7 @@
       body{
         background-color: #fff0e3;
       }
-      .parteneri-zona, .timer, .project-card{
+      .parteneri-zona, .timer, .event-card{
         background-color: rgb(226, 208, 193);
       }
       .parteneri-label{
@@ -41,6 +41,21 @@
         font-size:1.5rem;
         text-align: center;
       }
+
+      .events-grid{
+        max-height: 10000px;
+
+      }
+
+      @media (max-width: 1000px) {
+        .events-grid {
+          grid-template-columns: repeat(
+            auto-fit,
+            calc(calc(100% - (1 * var(--event-gap))) / 2)
+          );
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -110,127 +125,72 @@
 
     <section class="sectiune-trasee container" id="trasee">
       <h2 class="section-title">TRASEE <span class="dot">.</span></h2>
-      <div class="routes-container">
-        <div class="project-card route-item">
-          <div class="route-gallery">
-            <button class="nav-arrow prev-arrow">&#10094;</button>
+      <div class="events-grid">
+        <div class="event-card route-item">
+          
             <img
-              src="images/trasee/1/1.webp"
-              class="route-slide active"
+              src="images/trasee/coffeerun/1.png"
               alt="Traseu 1"
             />
-            <img
-              src="images/trasee/1/2.webp"
-              class="route-slide"
-              alt="Traseu 1"
-            />
-            <button class="nav-arrow next-arrow">&#10095;</button>
-          </div>
 
-          <div class="card-date">6.3KM</div>
+          <div class="card-date">6.3 KM</div>
           <h3>Cold Brew Run</h3>
 
-          <div class="description-container">
-            <div class="long-description"></div>
-          </div>
-
           <div class="card-footer">
-            <a href="trasee/1.gpx" download class="btn-download">
+            <a href="trasee/coffeerun/cold-brew-run.gpx" download class="btn-download">
               <span>⬇</span> DESCARCĂ GPX
             </a>
           </div>
         </div>
 
-        <div class="project-card route-item">
-          <div class="route-gallery">
-            <button class="nav-arrow prev-arrow">&#10094;</button>
+        <div class="event-card route-item">
+          
             <img
-              src="images/trasee/1/1.webp"
-              class="route-slide active"
+              src="images/trasee/coffeerun/2.png"
               alt="Traseu 1"
             />
-            <img
-              src="images/trasee/1/2.webp"
-              class="route-slide"
-              alt="Traseu 1"
-            />
-            <button class="nav-arrow next-arrow">&#10095;</button>
-          </div>
 
           <div class="card-date">5.0 KM</div>
           <h3>Long Black Run</h3>
 
-          <div class="description-container">
-            <div class="long-description"></div>
-          </div>
-
           <div class="card-footer">
-            <a href="trasee/1.gpx" download class="btn-download">
+            <a href="trasee/coffeerun/long-black-run.gpx" download class="btn-download">
               <span>⬇</span> DESCARCĂ GPX
             </a>
           </div>
         </div>
 
-        <div class="project-card route-item">
-          <div class="route-gallery">
-            <button class="nav-arrow prev-arrow">&#10094;</button>
+        <div class="event-card route-item">
+          
             <img
-              src="images/trasee/1/1.webp"
-              class="route-slide active"
+              src="images/trasee/coffeerun/3.png"
               alt="Traseu 1"
             />
-            <img
-              src="images/trasee/1/2.webp"
-              class="route-slide"
-              alt="Traseu 1"
-            />
-            <button class="nav-arrow next-arrow">&#10095;</button>
-          </div>
 
           <div class="card-date">2.5 KM</div>
           <h3>Espresso Run</h3>
 
-          <div class="description-container">
-            <div class="long-description"></div>
-          </div>
-
           <div class="card-footer">
-            <a href="trasee/1.gpx" download class="btn-download">
+            <a href="trasee/coffeerun/espresso-run.gpx" download class="btn-download">
               <span>⬇</span> DESCARCĂ GPX
             </a>
           </div>
         </div>
 
-        <div class="project-card route-item">
-          <div class="route-gallery">
-            <button class="nav-arrow prev-arrow">&#10094;</button>
+        <div class="event-card route-item">
+          
             <img
-              src="images/trasee/1/1.webp"
-              class="route-slide active"
+              src="images/trasee/coffeerun/4.png"
               alt="Traseu 1"
             />
-            <img
-              src="images/trasee/1/2.webp"
-              class="route-slide"
-              alt="Traseu 1"
-            />
-            <button class="nav-arrow next-arrow">&#10095;</button>
-          </div>
 
-          <div class="card-date">3 x 300 M</div>
-          <h3>Babycino Run</h3>
-
-          <div class="description-container">
-            <div class="long-description"></div>
-          </div>
-
+          <div class="card-date">3 X 300 m</div>
+          <h3>Babyccino Run</h3>
+          <h3 style="color:var(--text-dim); white-space:inherit;">* destinat copiilor cu vârsta de până la 10 ani</h3>
           <div class="card-footer">
-            <a href="trasee/1.gpx" download class="btn-download">
-              <span>⬇</span> DESCARCĂ GPX
-            </a>
+            
           </div>
         </div>
-      </div>
     </section>
 
     <section class="container">
@@ -298,36 +258,6 @@
 
     <script src="script.js?v=20"></script>
     <script>
-      // Logica pentru Galeriile Foto Individuale
-      document.querySelectorAll(".route-item").forEach((item) => {
-        const slides = item.querySelectorAll(".route-slide");
-        const nextBtn = item.querySelector(".next-arrow");
-        const prevBtn = item.querySelector(".prev-arrow");
-        let current = 0;
-
-        function showSlide(index) {
-          slides.forEach((s) => s.classList.remove("active"));
-          if (index >= slides.length) current = 0;
-          else if (index < 0) current = slides.length - 1;
-          else current = index;
-          slides[current].classList.add("active");
-        }
-
-        nextBtn.addEventListener("click", () => showSlide(current + 1));
-        prevBtn.addEventListener("click", () => showSlide(current - 1));
-      });
-
-      // Logica pentru Load More Text
-      document.querySelectorAll(".btn-load-more").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          const desc = this.previousElementSibling;
-          desc.classList.toggle("expanded");
-          this.textContent = desc.classList.contains("expanded")
-            ? "Arată mai puțin"
-            : "Citește mai mult...";
-        });
-      });
-
       // Set the date we're counting down to
 var countDownDate = new Date("June 1, 2026 11:00:00").getTime();
 
@@ -347,8 +277,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("timer").innerHTML = days + " zile " + hours + " ore "
+  + minutes + " m " + seconds + " s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
