@@ -893,6 +893,10 @@ footer {
   .p-link img {
     height: 35px;
   }
+
+  .btn-download{
+    font-size:0.6rem;
+  }
 }
 
 @media (max-width: 400px) {

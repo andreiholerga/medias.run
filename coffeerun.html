@@ -9,7 +9,7 @@
       content="O comunitate unită de pasiune, energie și dorința de a fi mai buni în fiecare zi."
     />
 
-    <link rel="stylesheet" href="style.css?v=21" />
+    <link rel="stylesheet" href="style.css?v=22" />
     <link rel="icon" type="image/png" href="/logo/logo.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
@@ -58,6 +58,13 @@
             calc(calc(100% - (1 * var(--event-gap))) / 2)
           );
         }
+      
+      }
+
+      @media (max-width: 400px){
+        .events-grid {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
       }
 
     </style>
@@ -260,7 +267,7 @@
       <div class="container"><p>&copy; 2026 Binderbubi Running Mediaș.</p></div>
     </footer>
 
-    <script src="script.js?v=21"></script>
+    <script src="script.js?v=22"></script>
     <script>
       // Set the date we're counting down to
 var countDownDate = new Date("June 1, 2026 11:00:00").getTime();
