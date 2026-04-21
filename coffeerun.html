@@ -34,6 +34,7 @@
         color:black;
       }
       .timer{
+        padding: 15px;
         font-size: 1.5rem;
       }
       .sectiune-date{
@@ -52,6 +53,9 @@
             }
 
       @media (max-width: 1000px) {
+        .timer{
+          font-size:1.2rem;
+        }
         .events-grid {
           grid-template-columns: repeat(
             auto-fit,
@@ -62,6 +66,9 @@
       }
 
       @media (max-width: 400px){
+        .timer{
+          font-size:1rem;
+        }
         .events-grid {
     grid-template-columns: repeat(auto-fit, 100%);
   }
