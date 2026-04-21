@@ -21,47 +21,61 @@
 
     <style>
       .p-link img {
-        height: 20vmin;
+        width: 15vh;
+        height: auto;
+      }
+      body{
+        background-color: #fff0e3;
+      }
+      .parteneri-zona, .timer, .project-card{
+        background-color: rgb(226, 208, 193);
+      }
+      .parteneri-label{
+        color:black;
+      }
+      .timer{
+        font-size: 1.5rem;
+      }
+      .sectiune-date{
+        padding-bottom: 0px;
+        font-size:1.5rem;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <header id="nav"></header>
 
-    <section class="cause-header">
-      <div class="container" style="border: none">
-        <span class="badge" style="background: var(--primary)"
-          >EVENIMENT CARITABIL</span
-        >
-        <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900">
-          Coffee Run
-        </h1>
+    <img class = "container center" style="width: 100%;
+        padding-top:0;" src="images/evenimente/coffeerun.jpg"/>
 
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto">
-          Susținem participarea echipei „The Resistance” la etapa europeană a
-          competiției FIRST Tech Challenge.
-        </p>
-
-        <div class="stats-grid">
-          <div class="stat-box">
-            <h2>4</h2>
-            <p>Trasee</p>
-          </div>
-          <div class="stat-box">
-            <h2></h2>
-            <p></p>
-          </div>
-          <div class="stat-box">
-            <h2></h2>
-            <p></p>
-          </div>
-          <div class="stat-box">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-      </div>
+    <section class="container timer">
+      <p class="center">Au mai rămas:</p>
+      <h2 id="timer" class="center"></h1>
     </section>
+
+    <section class="container sectiune-date">
+      <h2>
+        1 Iunie, Ora  <span class="highlight">11:00</span>
+      </h2>
+      <h3>
+        Taxă de participare: 30 lei
+      </h3>
+      <h4 style="color:var(--text-dim)">
+        * Înscriere gratuită pentru copiii sub 14 ani
+      </h4><br>
+      <a href="https://maps.app.goo.gl/5a2LcmwQRNUs2wGx9" style="text-decoration: none;" target="_blank">
+        <h2 style="color:var(--text-dark);">
+          <span class="highlight">Start:</span> Bean Roasters Mediaș
+        </h2>
+        <h3 style="color:var(--text-dim);">
+          Strada Petőfi Sándor nr. 2
+        </h3>
+      </a>
+      
+    </section>
+
+    
 
     <section class="sectiune-trasee container">
       <h2 class="section-title">DESPRE <span class="dot">.</span></h2>
@@ -232,17 +246,47 @@
       <div class="parteneri-zona">
         <p class="parteneri-label">ORGANIZATORI</p>
         <div class="parteneri-grid">
+          <a href="http://www.primariamedias.ro" target="_blank" class="p-link">
+            <img
+              src="images/logo-primaria-medias.png"
+              alt="Primaria Municipiului Medias"
+            />
+          </a>
           <a href="https://beancoffee.ro" target="_blank" class="p-link">
             <img src="images/logo-bean-roasters.png" alt="The Bean Roasters" />
           </a>
           <a href="https://www.coffeecoop.ro" target="_blank" class="p-link">
             <img src="images/logo-coffee-coop.png" alt="Coffee Coop" />
           </a>
-          <a href="http://www.primariamedias.ro" target="_blank" class="p-link">
+          <a href="https://www.facebook.com/people/The-Resistance/100063261096852/" target="_blank" class="p-link">
+            <img src="images/logo-resistance.png" alt="Resistance" />
+          </a>
+          <a href="https://www.liceulroth.ro" target="_blank" class="p-link">
+            <img src="images/logo-roth.png" alt="Roth-Oberth" />
+          </a>
+        </div>
+      </div>
+
+      <div class="parteneri-zona">
+        <p class="parteneri-label">PARTENERI</p>
+        <div class="parteneri-grid">
+          <a href="https://www.facebook.com/karmatattooatelier/" target="_blank" class="p-link">
             <img
-              src="images/Primaria-Medias.png"
-              alt="Primaria Municipiului Medias"
+              src="images/logo-karma.png"
+              alt="Karma Tattoo Atelier"
             />
+          </a>
+          <a href="https://rubia.ro" target="_blank" class="p-link">
+            <img src="images/logo-rubia.png" alt="Rubia" />
+          </a>
+          <a href="https://www.medias.run" target="_blank" class="p-link">
+            <img src="images/logo-bbr.webp" alt="BBR" />
+          </a>
+          <a href="https://novatv.ro" target="_blank" class="p-link">
+            <img src="images/logo-nova.png" alt="Nova TV Medias" />
+          </a>
+          <a href="https://dianthusmedias.ro" target="_blank" class="p-link">
+            <img src="images/logo-dianthus-medias.png" alt="Dianthus" />
           </a>
         </div>
       </div>
@@ -283,6 +327,35 @@
             : "Citește mai mult...";
         });
       });
+
+      // Set the date we're counting down to
+var countDownDate = new Date("June 1, 2026 11:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+}, 1000);
     </script>
   </body>
 </html>
