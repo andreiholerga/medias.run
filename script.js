@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadNavbar();
 
   const imageFolder = "images/";
-  const totalImages = 118; // Update this number if you add/remove images
+  const totalImages = 122; // Update this number if you add/remove images
 
   // Array of image names (you can expand this easily)
   const galleryImages = Array.from({ length: totalImages }, (_, i) => {
