@@ -8,11 +8,12 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter/inter-v20-latin_latin-ext-700.woff2") format("woff2");
+  src: url("/fonts/Inter/inter-v20-latin_latin-ext-900.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
+
 :root {
   --primary: #db2222; /* Roșu Backyard */
   --bg-body: #ffffff; /* Alb principal */
