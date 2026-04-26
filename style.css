@@ -1,6 +1,5 @@
 :root {
   --primary: #db2222; /* Roșu Backyard */
-  --primary-faded: #f74545;
   --bg-body: #ffffff; /* Alb principal */
   --bg-alt: #e2e2e2; /* Gri deschis pentru secțiuni */
   --text-dark: #111111; /* Negru titluri */
@@ -351,7 +350,7 @@ header {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--primary-faded);
+  color: var(--primary);
   font-weight: 900;
   font-size: 0.9rem;
   display: block;
