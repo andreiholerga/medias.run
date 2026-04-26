@@ -1,6 +1,6 @@
 :root {
-  --primary: #ff3e3e; /* Roșu Backyard */
-  --primary-faded: #ff7878;
+  --primary: #db2222; /* Roșu Backyard */
+  --primary-faded: #fd5c5c;
   --bg-body: #ffffff; /* Alb principal */
   --bg-alt: #e2e2e2; /* Gri deschis pentru secțiuni */
   --text-dark: #111111; /* Negru titluri */
@@ -162,7 +162,7 @@ header {
 
 .btn-primary {
   background: var(--primary);
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
