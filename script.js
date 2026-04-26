@@ -1,23 +1,6 @@
 // ================================================
 // Binderbubi Backyard Running - Main Script
 // ================================================
-async function loadNavbar() {
-  const navbarContainer = document.getElementById("nav");
-  if (!navbarContainer) return;
-
-  try {
-    const response = await fetch("navbar.html");
-    const navbarHTML = await response.text();
-    navbarContainer.innerHTML = navbarHTML;
-
-    // Wait a tiny bit for DOM to update
-    setTimeout(() => {
-      initHamburgerMenu();
-    }, 10);
-  } catch (error) {
-    console.error("Error loading navbar:", error);
-  }
-}
 
 function initHamburgerMenu() {
   const hamburger = document.getElementById("hamburger");
@@ -45,7 +28,7 @@ function initHamburgerMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadNavbar();
+  initHamburgerMenu();
 
   const imageFolder = "images/";
   const totalImages = 122; // Update this number if you add/remove images
