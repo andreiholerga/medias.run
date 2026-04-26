@@ -768,7 +768,7 @@ footer {
   }
   50% {
     border-color: var(--primary);
-    background-color: #ffefb1;
+    background-color: #fef6d6;
   }
   100% {
     border-color: #ffc2c2;
