@@ -186,14 +186,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (hasHighFived === "true") {
       highFiveBtn.innerHTML =
-        '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
+        '<img src="images/thumbsup.webp" style=" width: 15vw;"/>';
       highFiveBtn.disabled = true;
       countWrapper.style.opacity = "1";
     } else {
       highFiveBtn.addEventListener("click", async () => {
         // Visual feedback
         highFiveBtn.innerHTML =
-          '<img src="images/thumbsup.png" style=" width: 15vw;"/>';
+          '<img src="images/thumbsup.webp" style=" width: 15vw;"/>';
         highFiveBtn.disabled = true;
         countWrapper.style.opacity = "1";
 
