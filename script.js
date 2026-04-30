@@ -28,7 +28,6 @@ function initHamburgerMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  initHamburgerMenu();
 
   const imageFolder = "images/";
   const totalImages = 122; // Update this number if you add/remove images
