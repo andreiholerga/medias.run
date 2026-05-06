@@ -833,7 +833,7 @@ footer {
   .routes-container {
     grid-template-columns: repeat(
       auto-fit,
-      calc(calc(100% - (2 * var(--event-gap))) / 3)
+      calc(calc(100% - (1 * var(--event-gap))) / 2)
     );
   }
 
