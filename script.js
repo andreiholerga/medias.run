@@ -232,10 +232,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const eventGrid = document.getElementById("eventsGrid");
   const eventButton = document.getElementById("eventBtn");
 
-  eventButton.addEventListener("click", () => {
+  if (eventButton && eventGrid) {eventButton.addEventListener("click", () => {
     eventGrid.classList.toggle("expanded");
     eventButton.textContent = eventGrid.classList.contains("expanded")
       ? "Vezi mai puține"
       : "Vezi mai multe";
-  });
+  });}
+
+  const binderbubiGrid = document.getElementById("binderbubiGrid");
+  const binderbubiButton = document.getElementById("binderbubiBtn");
+
+ if (binderbubiButton && binderbubiGrid) { binderbubiButton.addEventListener("click", () => {
+    binderbubiGrid.classList.toggle("expanded");
+    binderbubiButton.textContent = binderbubiGrid.classList.contains("expanded")
+      ? "Închide"
+      : "Vezi alergătorii";
+  });}
+
+  const beanRoastersGrid = document.getElementById("beanRoastersGrid");
+  const beanRoastersButton = document.getElementById("beanRoastersBtn");
+
+ if (beanRoastersButton && beanRoastersGrid) { beanRoastersButton.addEventListener("click", () => {
+    beanRoastersGrid.classList.toggle("expanded");
+    beanRoastersButton.textContent = beanRoastersGrid.classList.contains("expanded")
+      ? "Închide"
+      : "Vezi alergătorii";
+  });}
 });

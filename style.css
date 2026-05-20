@@ -322,7 +322,7 @@ header {
 }
 
 .events-grid.expanded {
-  max-height: 10000px; /* Large enough to fit all content */
+  max-height: 10000px !important; /* Large enough to fit all content */
 }
 
 .events-grid h3 {
