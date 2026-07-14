@@ -23,6 +23,139 @@
         font-size: 26px;
         font-weight: 900;
       }
+
+      /* Container Carusel */
+      .carousel-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        max-width: 600px; /* Limitează lățimea caruselului */
+        margin: 0 auto; /* Centrează caruselul */
+        overflow: hidden; /* Taie orice pixel care iese în afară la hover și previne apariția scrollbar-ului general */
+      }
+
+      .project-display-gallery {
+        display: flex;
+        gap: 0;
+        overflow-x: hidden !important; /* Blochează complet scrollbar-ul orizontal */
+        overflow-y: hidden !important; /* Blochează complet scrollbar-ul vertical */
+        scroll-behavior: smooth;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+
+        /* Forțează ascunderea barei de scroll pe toate browserele */
+        -ms-overflow-style: none; /* IE și Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      /* Ascunde bara de scroll pentru Chrome, Safari și Opera */
+      .project-display-gallery::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      .project-display-gallery img:hover {
+        transform: scale(1.01);
+      }
+
+      /* Butoane navigare carusel mai vizibile peste imagine */
+      .carousel-btn {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0; /* Previne micșorarea butoanelor */
+      }
+
+      /* Butoane navigare carusel */
+      .carousel-btn {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        z-index: 10;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Lightbox (Imaginea mărită) */
+      .image-lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lightbox-content {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        border-radius: 4px;
+        animation: zoomEffect 0.2s ease;
+      }
+
+      @keyframes zoomEffect {
+        from {
+          transform: scale(0.9);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* Responsivitate carusel */
+      @media (max-width: 992px) {
+        .project-display-gallery img {
+          flex: 0 0 calc(33.33% - 10px);
+          width: calc(33.33% - 10px);
+        }
+      }
+
+      @media (max-width: 576px) {
+        .project-display-gallery img {
+          flex: 0 0 calc(50% - 8px);
+          width: calc(50% - 8px);
+        }
+        .carousel-btn {
+          display: flex;
+          width: 35px;
+          height: 35px;
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body class="subpage">
@@ -155,7 +288,9 @@
             >CUMPĂRĂ KILOMETRI</a
           >
         </div>
-        <br /><br />
+
+        <br />
+        <br />
         <a
           href="https://www.autism24h.ro/proiecte-sustinute/"
           target="_blank"
@@ -164,6 +299,124 @@
         >
       </div>
     </section>
+    <section class="container">
+      <h2 class="section-title">Fapte <span class="highlight">Bune</span></h2>
+
+      <!-- Structura pe 2 coloane pentru cele 2 echipe -->
+      <div class="fapte-bune-split">
+        <!-- Echipa 1 -->
+        <div class="team-fapte-column">
+          <div class="team-header-logo">
+            <img src="images/logo-bbr.webp" alt="Binderbubi Running Mediaș" />
+          </div>
+          <!-- Logourile celor 5 Proiecte -->
+          <div class="projects-logos-grid">
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/meloterapie.webp"
+              data-project="b1"
+              alt="Proiect 1"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/sport.webp"
+              data-project="b2"
+              alt="Proiect 2"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/spatiu.webp"
+              data-project="b3"
+              alt="Proiect 3"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/logopedica.webp"
+              data-project="b4"
+              alt="Proiect 4"
+            />
+            <img
+              class="fapte-bune-logo active"
+              src="images/proiecte_autism24h/logo/laptop.webp"
+              data-project="b5"
+              alt="Proiect 5"
+            />
+          </div>
+        </div>
+
+        <!-- Echipa 2 -->
+        <div class="team-fapte-column">
+          <div class="team-header-logo">
+            <img
+              src="images/bean_roasters_running.webp"
+              alt="Bean Roasters Running Mediaș"
+            />
+          </div>
+          <!-- Logourile celor 5 Proiecte -->
+          <div class="projects-logos-grid">
+            <img
+              class="fapte-bune-logo active"
+              src="images/proiecte_autism24h/logo/meloterapie.webp"
+              data-project="br1"
+              alt="Proiect 6"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/sport.webp"
+              data-project="br2"
+              alt="Proiect 7"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/spatiu.webp"
+              data-project="br3"
+              alt="Proiect 8"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/logopedica.webp"
+              data-project="br4"
+              alt="Proiect 9"
+            />
+            <img
+              class="fapte-bune-logo"
+              src="images/proiecte_autism24h/logo/laptop.webp"
+              data-project="br5"
+              alt="Proiect 10"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Zona unică dedesubt unde se deschide proiectul activ -->
+
+        <div class="project-details-display" id="projectDetailsDisplay">
+          <h3 class="project-display-title" id="displayTitle">Titlu Proiect</h3>
+          <p class="project-display-text" id="displayText">În curând.</p>
+
+          <!-- Carusel cu butoane stânga/dreapta -->
+          <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+            <div class="project-display-gallery" id="displayGallery">
+              <!-- Pozele se încarcă dinamic aici -->
+            </div>
+            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+          </div>
+        </div>
+
+        <!-- Structura pentru mărirea pozei (Lightbox) -->
+        <div class="image-lightbox" id="imageLightbox">
+          <span class="lightbox-close" id="lightboxClose">&times;</span>
+          <img
+            class="lightbox-content"
+            id="lightboxImg"
+            src=""
+            alt="Imagine mărită"
+          />
+        </div>
+      </div>
+    </section>
+
     <section class="container">
       <h2 class="section-title">
         ECHIPELE <span class="highlight">NOASTRE</span>
@@ -389,5 +642,140 @@
       <div id="caption"></div>
     </div>
     <script src="script.js?v=30" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const projectsData = {
+          b1: {
+            title: "Kit MELOTERAPIE",
+            text: "In curand.",
+            images: ["images/logo-bbr.webp"],
+          },
+          b2: {
+            title: "KIT Terapie prin SPORT",
+            text: "In curand.",
+            images: ["images/logo-bbr.webp"],
+          },
+          b3: {
+            title: "KIT Academia Spatiului",
+            text: "In curand.",
+            images: ["images/logo-bbr.webp"],
+          },
+          b4: {
+            title: "CUTIA LOGOPEDICA",
+            text: "In curand.",
+            images: ["images/logo-bbr.webp"],
+          },
+          b5: {
+            title: "LAPTOP",
+            text: "In curand.",
+            images: ["images/proiecte_autism24h/binderbubi/laptop/1.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/2.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/4.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/6.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/5.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/7.webp",
+              "images/proiecte_autism24h/binderbubi/laptop/3.webp",
+            ],
+          },
+          br1: {
+            title: "Kit MELOTERAPIE",
+            text: "In curand.",
+            images: ["images/bean_roasters_running.webp"],
+          },
+          br2: {
+            title: "KIT Terapie prin SPORT",
+            text: "In curand.",
+            images: ["images/bean_roasters_running.webp"],
+          },
+          br3: {
+            title: "KIT Academia Spatiului",
+            text: "In curand.",
+            images: ["images/bean_roasters_running.webp"],
+          },
+          br4: {
+            title: "CUTIA LOGOPEDICA",
+            text: "In curand.",
+            images: ["images/bean_roasters_running.webp"],
+          },
+          br5: {
+            title: "LAPTOP",
+            text: "In curand.",
+            images: ["images/bean_roasters_running.webp"],
+          },
+        };
+
+        const titleEl = document.getElementById("displayTitle");
+        const textEl = document.getElementById("displayText");
+        const galleryEl = document.getElementById("displayGallery");
+        const logos = document.querySelectorAll(".fapte-bune-logo");
+
+        // Elemente Lightbox
+        const lightbox = document.getElementById("imageLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        const lightboxClose = document.getElementById("lightboxClose");
+
+        function loadProject(id) {
+          const project = projectsData[id];
+          if (!project) return;
+
+          titleEl.textContent = project.title;
+          textEl.textContent = project.text;
+
+          galleryEl.innerHTML = "";
+          project.images.forEach((imgUrl) => {
+            const img = document.createElement("img");
+            img.src = imgUrl;
+            img.alt = project.title;
+
+            // Eveniment deschidere poză la click
+            img.addEventListener("click", function () {
+              lightboxImg.src = this.src;
+              lightbox.style.display = "flex";
+            });
+
+            galleryEl.appendChild(img);
+          });
+
+          logos.forEach((logo) => logo.classList.remove("active"));
+          const selectedLogo = document.querySelector(`[data-project="${id}"]`);
+          if (selectedLogo) selectedLogo.classList.add("active");
+
+          // Resetează scroll-ul caruselului la început când schimbi proiectul
+          galleryEl.scrollLeft = 0;
+        }
+
+        // Navigare o singură imagine odată (stânga / dreapta)
+        document.getElementById("nextBtn").addEventListener("click", () => {
+          const slideWidth = galleryEl.clientWidth;
+          galleryEl.scrollBy({ left: slideWidth, behavior: "smooth" });
+        });
+
+        document.getElementById("prevBtn").addEventListener("click", () => {
+          const slideWidth = galleryEl.clientWidth;
+          galleryEl.scrollBy({ left: -slideWidth, behavior: "smooth" });
+        });
+
+        // Închidere Lightbox
+        lightboxClose.addEventListener("click", () => {
+          lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+          if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+          }
+        });
+
+        // Evenimente click logouri echipe
+        logos.forEach((logo) => {
+          logo.addEventListener("click", function () {
+            loadProject(this.getAttribute("data-project"));
+          });
+        });
+
+        // Laptop Binderbubi (b5) activ la pornire
+        loadProject("b5");
+      });
+    </script>
   </body>
 </html>

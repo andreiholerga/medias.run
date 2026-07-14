@@ -350,7 +350,6 @@ header {
 .route-card:hover,
 .runner-card:hover,
 .event-card {
-
   transform: translateY(-5px);
   border-color: var(--primary);
   background: #fff;
@@ -828,6 +827,118 @@ footer {
   display: none;
 }
 
+/* ====================== MODIFICĂRI FAPTE BUNE ====================== */
+.fapte-bune-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.team-fapte-column {
+  background: var(--bg-alt);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.team-header-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-header-logo img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.projects-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.fapte-bune-logo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit:cover;
+  background: #fff;
+
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.fapte-bune-logo:hover, 
+.fapte-bune-logo.active {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Zona de afișare dinamică a proiectului */
+.project-details-display {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.project-display-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.project-display-text {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-bottom: 25px;
+}
+
+.project-display-gallery img {
+  flex: 0 0 100%; /* O singură imagine ocupă 100% din lățime */
+  width: 100%;
+  aspect-ratio: 4/3;
+  
+  /* SCHIMBĂRILE CHEIE: */
+  object-fit: contain;       /* Afișează imaginea întreagă, fără crop */
+  background-color: #000000; /* Fundal negru (schimbă cu #ffffff pentru whitebar) */
+  
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  scroll-snap-align: start; 
+}
+
+/* Responsivitate pentru ecrane mici */
+@media (max-width: 768px) {
+  .fapte-bune-split {
+    grid-template-columns: 1fr;
+  }
+  .project-display-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .projects-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .project-display-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* ====================== RESPONSIVE ====================== */
 
 @media (max-width: 1000px) {
