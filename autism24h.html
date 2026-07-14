@@ -35,65 +35,169 @@
         overflow: hidden; /* Taie orice pixel care iese în afară la hover și previne apariția scrollbar-ului general */
       }
 
-      .project-display-gallery {
-        display: flex;
-        gap: 0;
-        overflow-x: hidden !important; /* Blochează complet scrollbar-ul orizontal */
-        overflow-y: hidden !important; /* Blochează complet scrollbar-ul vertical */
-        scroll-behavior: smooth;
-        width: 100%;
-        scroll-snap-type: x mandatory;
+      /* ====================== MODIFICĂRI FAPTE BUNE & CARUSEL ====================== */
+.fapte-bune-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
 
-        /* Forțează ascunderea barei de scroll pe toate browserele */
-        -ms-overflow-style: none; /* IE și Edge */
-        scrollbar-width: none; /* Firefox */
-      }
+.team-fapte-column {
+  background: var(--bg-alt);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-      /* Ascunde bara de scroll pentru Chrome, Safari și Opera */
-      .project-display-gallery::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-        height: 0 !important;
-      }
+.team-header-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      .project-display-gallery img:hover {
-        transform: scale(1.01);
-      }
+.team-header-logo img {
+  height: 100%;
+  object-fit: contain;
+}
 
-      /* Butoane navigare carusel mai vizibile peste imagine */
-      .carousel-btn {
-        background: var(--primary);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 45px;
-        height: 45px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-        z-index: 10;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        flex-shrink: 0; /* Previne micșorarea butoanelor */
-      }
+.projects-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  width: 100%;
+}
 
-      /* Butoane navigare carusel */
-      .carousel-btn {
-        background: var(--primary);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        z-index: 10;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
+.fapte-bune-logo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #fff;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.fapte-bune-logo:hover, 
+.fapte-bune-logo.active {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Zona de afișare dinamică a proiectului */
+.project-details-display {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.project-display-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.project-display-text {
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-bottom: 25px;
+}
+
+/* Container Carusel */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px; /* Limitează lățimea caruselului */
+  margin: 0 auto;  /* Centrează caruselul */
+  overflow: hidden; /* Taie pixelii care ies în afară */
+}
+
+/* Corecție majoră: Modificăm din Grid în Flex pentru a permite scroll-ul orizontal */
+.project-display-gallery {
+  display: flex !important; /* Forțăm Flexbox */
+  gap: 0;
+  overflow-x: hidden !important; /* Blochează scrollbar-ul orizontal */
+  overflow-y: hidden !important; /* Blochează scrollbar-ul vertical */
+  scroll-behavior: smooth;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+
+  /* Forțează ascunderea barei de scroll */
+  -ms-overflow-style: none; /* IE și Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ascunde bara de scroll în browsere bazate pe Webkit */
+.project-display-gallery::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.project-display-gallery img {
+  flex: 0 0 100%; /* Fiecare imagine ocupă exact 100% din lățimea containerului */
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;       /* Afișează imaginea întreagă, fără decupaj */
+  background-color: #000000; /* Fundal negru */
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  scroll-snap-align: start; 
+}
+
+.project-display-gallery img:hover {
+  transform: scale(1.01);
+}
+
+/* Unificăm și curățăm butoanele caruselului */
+.carousel-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Previne strivirea butoanelor */
+  transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: #000000;
+}
+
+/* Responsivitate corectată */
+@media (max-width: 576px) {
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  .project-display-gallery img{
+    aspect-ratio: 3/4;
+  }
+}
+
 
       /* Lightbox (Imaginea mărită) */
       .image-lightbox {
@@ -136,26 +240,6 @@
         cursor: pointer;
       }
 
-      /* Responsivitate carusel */
-      @media (max-width: 992px) {
-        .project-display-gallery img {
-          flex: 0 0 calc(33.33% - 10px);
-          width: calc(33.33% - 10px);
-        }
-      }
-
-      @media (max-width: 576px) {
-        .project-display-gallery img {
-          flex: 0 0 calc(50% - 8px);
-          width: calc(50% - 8px);
-        }
-        .carousel-btn {
-          display: flex;
-          width: 35px;
-          height: 35px;
-          font-size: 1rem;
-        }
-      }
     </style>
   </head>
   <body class="subpage">
