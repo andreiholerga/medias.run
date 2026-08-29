@@ -127,7 +127,7 @@
 
     <section class="container timer">
       <p class="center">Au mai rămas:</p>
-      <h2 id="timer" class="center">00 zile 00 ore 00 m 00 s</h1>
+      <h2 id="timer" class="center">FINALIZAT</h1>
     </section>
 
     <section class="container sectiune-date">
@@ -161,14 +161,11 @@
       </a>
             <br><br>
       
-      <a href="https://maps.app.goo.gl/kNBptyr1Shm6diAPA?g_st=iw" style="text-decoration: none;" target="_blank">
+      
         <h2 style="color:var(--text-dark);">
           <span class="highlight">Start:</span> Via Medwine
         </h2>
-        <h3 style="color:var(--text-dim);">
-          ACCES: Strada Câmpul de Jos -> Strada Câmpul de Sus (APASĂ PENTRU A DESCHIDE ÎN GOOGLE MAPS)
-        </h3>
-      </a>
+      
       
     </section>
 
@@ -262,40 +259,10 @@ Va fi o dimineață cu alergare, voie bună, socializare și o cauză frumoasă.
     <footer>
       <div class="container"><p>&copy; 2026 Binderbubi Running Mediaș.</p></div>
       <a href="https://github.com/andreiholerga" target="_blank">
-        <p>Website created by Andrei Holerga</p>
+        <p>Developed by Andrei Holerga</p>
       </a>
     </footer>
 
     <script src="script.js?v=30" defer></script>
-    <script>
-      // Set the date we're counting down to
-var countDownDate = new Date("August 29, 2026 9:30:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("timer").innerHTML = days + " zile " + hours + " ore "
-  + minutes + " m " + seconds + " s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "FINALIZAT";
-    }
-}, 1000);
-    </script>
   </body>
 </html>

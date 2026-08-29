@@ -117,7 +117,7 @@ header {
 
 .hero {
   position: relative;
-  height: 85vh; /* smaller = faster paint on mobile */
+  height: 85vh;
   min-height: 400px;
   display: flex;
   align-items: center;
@@ -139,12 +139,11 @@ header {
   will-change: transform; /* smoother rendering */
 }
 
-/* OPTIONAL: lightweight overlay (cheaper than gradient in background) */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.6); /* keep it simple */
+  background: rgba(255, 255, 255, 0.25);
   z-index: -1;
 }
 
@@ -826,7 +825,6 @@ footer {
 .mobile-break {
   display: none;
 }
-
 
 /* Responsivitate pentru ecrane mici */
 @media (max-width: 768px) {
