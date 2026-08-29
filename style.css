@@ -179,6 +179,8 @@ header {
 }
 
 .hero p {
+  text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
   font-size: 1.25rem;
   margin-bottom: 40px;
   color: var(--text-dim);
