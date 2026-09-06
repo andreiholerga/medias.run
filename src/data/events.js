@@ -1,11 +1,19 @@
 const events = [
   {
-    href: "https://sighisoara10k.ro",
+    href: "/autism24h",
+    external: false,
+    eyebrow: "MAMAIA",
+    title: "AUTISM 24H",
+    img: "/images/evenimente/autism24h.webp",
+    date: "12-13 SEPTEMBRIE",
+  },
+  {
+    href: "https://racetime.ro/events/194/register",
     external: true,
-    eyebrow: "SIGHIȘOARA",
-    title: "Sighișoara 10k",
-    img: "/images/evenimente/sighisoara.webp",
-    date: "5 SEPTEMBRIE",
+    eyebrow: "BLAJ",
+    title: "Crosul Speranței",
+    img: "/images/evenimente/crosulsperantei.webp",
+    date: "3 OCTOMBRIE",
   },
   {
     href: "/coffeerunandwine",

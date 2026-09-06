@@ -6,10 +6,14 @@ function CardInner({ event }) {
   return (
     <>
       <div className="flex items-baseline justify-between mb-2">
-        <span className="font-mono text-[11px] tracking-widest uppercase text-trail">{event.eyebrow}</span>
+        <span className="font-mono text-[11px] tracking-widest uppercase text-trail">
+          {event.eyebrow}
+        </span>
       </div>
-      <h3 className="font-display font-bold text-lg leading-tight mb-3 truncate">{event.title}</h3>
-      <div className="relative overflow-hidden rounded-sm aspect-[11/14] bg-ink/5">
+      <h3 className="font-display font-bold text-lg leading-tight mb-3 truncate">
+        {event.title}
+      </h3>
+      <div className="relative overflow-hidden rounded-sm aspect-[1/1.414] bg-ink/5">
         <img
           src={event.img}
           alt={event.title}
@@ -17,7 +21,9 @@ function CardInner({ event }) {
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <p className="mt-3 text-center font-mono text-xs tracking-wide text-trail">{event.date}</p>
+      <p className="mt-3 text-center font-mono text-xs tracking-wide text-trail">
+        {event.date}
+      </p>
     </>
   );
 }
