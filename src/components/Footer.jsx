@@ -3,7 +3,7 @@ import TopoDivider from "./TopoDivider";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-paper/80 mt-20">
+    <footer className="bg-ink text-paper/80 mt-auto">
       <TopoDivider tone="paper" className="opacity-40" />
       <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
         <p className="font-body">&copy; 2026 Binderbubi Backyard Running.</p>

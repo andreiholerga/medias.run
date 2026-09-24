@@ -12,23 +12,34 @@ import CoffeeRun from "./pages/CoffeeRun.jsx";
 import CoffeeRunAndWine from "./pages/CoffeeRunAndWine.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import MediasSummerTrails from "./pages/MediasSummerTrails.jsx";
 
 export default function App() {
   return (
-    <LightboxProvider>
+    
+     <LightboxProvider>
       <ScrollManager />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/trasee" element={<Trasee />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/autism24h" element={<Autism24h />} />
-        <Route path="/coffeerun" element={<CoffeeRun />} />
-        <Route path="/coffeerunandwine" element={<CoffeeRunAndWine />} />
-        <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
+      
+
+      <div className="app-layout">
+        <Navbar />
+      
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/trasee" element={<Trasee />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/autism24h" element={<Autism24h />} />
+            <Route path="/coffeerun" element={<CoffeeRun />} />
+            <Route path="/coffeerunandwine" element={<CoffeeRunAndWine />} />
+            <Route path="/summertrails" element={<MediasSummerTrails />} />
+            <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        
+        <Footer />
+      </div>
     </LightboxProvider>
   );
 }

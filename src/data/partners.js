@@ -79,6 +79,14 @@ export const coffeeRunWineOrganizers = [
   },
 ];
 
+export const summerTrailsOrganizers = [
+  {
+    name: "medias.run",
+    href: "https://medias.run",
+    img: "/images/logo-brh.webp",
+  }
+];
+
 export const autismPartners = [
   {
     name: "The Bean Roasters",
