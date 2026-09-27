@@ -3,10 +3,12 @@ import EventsGrid from "../components/EventsGrid.jsx";
 import GallerySlider from "../components/GallerySlider.jsx";
 import HighFiveButton from "../components/HighFiveButton.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
+import {events, brhEvents} from "../data/events.js";
 
 export default function Home() {
   return (
     <main>
+      <title>Binderbubi Run & Hike | Mediaș</title>
       {/* HERO */}
       <section className="relative h-[85vh] min-h-[480px] flex items-end overflow-hidden">
         <img
@@ -38,16 +40,43 @@ export default function Home() {
         </div>
       </section>
       <TopoDivider className="-mt-1" />
+      <section
+        id="anunturi"
+        className="max-w-6xl mx-auto px-6 py-8 md:py-10"
+      >
+        <h2 className="font-display text-3xl md:text-4xl font-black uppercase mb-10">
+          ANUNȚURI<span className="text-trail">.</span>
+        </h2>
+        <div className="grid md:grid-cols-1">
+          <Link
+            to="/asociatie"
+            className="group border border-ink/10 bg-white p-8 hover:border-trail hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <span className="text-trail font-mono text-xs tracking-widest uppercase">
+              27.09.2026
+            </span>
+            <h3 className="font-display text-2xl font-black uppercase mt-2 mb-3">
+              Binderbubi Run & Hike
+            </h3>
+            <p className="text-ink/70 mb-6">
+               Un nou început. Aceeași pasiune. Un proiect care merge mai departe.
+            </p>
+            <span className="font-display font-bold text-trail">Detalii →</span>
+          </Link>
+
+        </div>
+      </section>
 
       {/* EVENIMENTE */}
       <section
-        id="evenimente"
+        id="evenimenteBRH"
         className="max-w-6xl mx-auto px-6 py-16 md:py-20"
       >
+        
         <h2 className="font-display text-3xl md:text-4xl font-black uppercase mb-10">
-          Evenimente în zonă<span className="text-trail">.</span>
+          Evenimente Binderbubi Run & Hike<span className="text-trail">.</span>
         </h2>
-        <EventsGrid />
+        <EventsGrid events={brhEvents} />
       </section>
 
       {/* DESPRE NOI */}
@@ -110,6 +139,16 @@ export default function Home() {
             scriem împreună următorul kilometru.
           </p>
         </div>
+      </section>
+
+       <section
+        id="evenimente"
+        className="max-w-6xl mx-auto px-6 py-16 md:py-20"
+      >
+        <h2 className="font-display text-3xl md:text-4xl font-black uppercase mb-10">
+          Evenimente în zonă<span className="text-trail">.</span>
+        </h2>
+        <EventsGrid events={events} />
       </section>
 
       {/* ACTIVITATE */}

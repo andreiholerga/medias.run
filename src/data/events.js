@@ -1,12 +1,4 @@
-const events = [
-  {
-    href: "/autism24h",
-    external: false,
-    eyebrow: "MAMAIA",
-    title: "AUTISM 24H",
-    img: "/images/evenimente/autism24h.webp",
-    date: "12-13 SEPTEMBRIE",
-  },
+export const events = [
   {
     href: "https://racetime.ro/events/194/register",
     external: true,
@@ -14,6 +6,14 @@ const events = [
     title: "Crosul Speranței",
     img: "/images/evenimente/crosulsperantei.webp",
     date: "3 OCTOMBRIE",
+  },
+  {
+    href: "/autism24h",
+    external: false,
+    eyebrow: "MAMAIA",
+    title: "AUTISM 24H",
+    img: "/images/evenimente/autism24h.webp",
+    date: "FINALIZAT",
   },
   {
     href: "/coffeerunandwine",
@@ -39,6 +39,17 @@ const events = [
     img: "/images/evenimente/alergari_iulie.webp",
     date: "MEDIAȘ • FINALIZAT",
   },
+];
+
+export const brhEvents = [
+  {
+    href: "/summertrails",
+    external: false,
+    eyebrow: "Mediaș",
+    title: "SUMMER TRAILS",
+    img: "/images/evenimente/summertrails-thumbnail.webp",
+    date: "19 IUNIE 2027",
+  }
 ];
 
 export default events;

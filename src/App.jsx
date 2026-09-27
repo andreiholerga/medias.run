@@ -13,6 +13,7 @@ import CoffeeRunAndWine from "./pages/CoffeeRunAndWine.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import MediasSummerTrails from "./pages/MediasSummerTrails.jsx";
+import BinderbubiRunHike from "./pages/BinderbubiRunHike.jsx";
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/coffeerun" element={<CoffeeRun />} />
             <Route path="/coffeerunandwine" element={<CoffeeRunAndWine />} />
             <Route path="/summertrails" element={<MediasSummerTrails />} />
+            <Route path="/asociatie" element={<BinderbubiRunHike />} />
             <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

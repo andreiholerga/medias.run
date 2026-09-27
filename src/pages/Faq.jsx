@@ -24,6 +24,7 @@ const FAQS = [
 export default function Faq() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16 md:py-20">
+      <title>FAQ | Binderbubi Run & Hike</title>
       <h1 className="font-display text-4xl md:text-5xl font-black uppercase mb-12">
         Întrebări <span className="text-trail">Frecvente</span>
       </h1>

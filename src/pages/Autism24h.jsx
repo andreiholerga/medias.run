@@ -44,6 +44,7 @@ function DonationTeam({ name, current, goal, moneyRaised, moneyGoal, href }) {
 export default function Autism24h() {
   return (
     <main>
+      <title>Autism24h 2026 | Binderbubi Run & Hike</title>
       {/* CAUSE HEADER */}
       <section className="relative text-center overflow-hidden">
         <div className="absolute inset-0 bg-ink" />

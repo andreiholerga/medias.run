@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import events from "../data/events.js";
+
 
 function CardInner({ event }) {
   return (
@@ -28,7 +28,7 @@ function CardInner({ event }) {
   );
 }
 
-export default function EventsGrid() {
+export default function EventsGrid({events=[]}) {
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? events : events.slice(0, 4);
 

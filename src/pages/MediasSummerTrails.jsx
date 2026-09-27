@@ -10,6 +10,7 @@ const EVENT_DATE = new Date("June 19, 2027 09:30:00");
 export default function MediasSummerTrails() {
   return (
     <main className="bg-[#fadfce]">
+      <title>Mediaș Summer Trails 2027</title>
       <section className="bg-[#ff751f]">
         <img
           src="/images/evenimente/summertrails1.png"

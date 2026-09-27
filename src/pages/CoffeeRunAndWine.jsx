@@ -10,6 +10,7 @@ const EVENT_DATE = new Date("August 29, 2026 09:30:00");
 export default function CoffeeRunAndWine() {
   return (
     <main className="bg-[#b7dce3]">
+      <title>Coffee Run & Wine | Binderbubi Run & Hike</title>
       <img
         src="/images/evenimente/coffeerunandwine2.webp"
         alt="Coffee Run & Wine"
