@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       {/* EVENIMENTE */}
-      {/* 
+      
       <section
         id="evenimenteBRH"
         className="max-w-6xl mx-auto px-6 py-16 md:py-20"
@@ -78,7 +78,7 @@ export default function Home() {
           Evenimente Binderbubi Run & Hike<span className="text-trail">.</span>
         </h2>
         <EventsGrid events={brhEvents} />
-      </section>*/}
+      </section>
 
       {/* DESPRE NOI */}
       <section id="despre-noi" className="border-t border-ink/10 bg-white/40">
