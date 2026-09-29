@@ -4,6 +4,7 @@ import RouteCard from "../components/RouteCard.jsx";
 export default function Trasee() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <title>Trasee de alergare | Binderbubi Run & Hike</title>
       <h1 className="font-display text-4xl md:text-5xl font-black uppercase mb-3">
         Trasee <span className="text-trail">Recomandate</span>
       </h1>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function PrivacyPolicy() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16 md:py-20">
+      <title>Privacy Policy | Binderbubi Run & Hike</title>
       <Link to="/" className="inline-block text-trail font-semibold mb-6 hover:underline">
         ← Înapoi la prima pagină
       </Link>

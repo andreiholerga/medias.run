@@ -10,6 +10,7 @@ const EVENT_DATE = new Date("June 1, 2026 13:00:00");
 export default function CoffeeRun() {
   return (
     <main className="bg-[#fff0e3]">
+      <title>Coffee Run | Binderbubi Run & Hike</title>
       <img
         src="/images/evenimente/coffeerun.webp"
         alt="Mediaș Coffee Run"
