@@ -1,4 +1,5 @@
 export const events = [
+  
   {
     href: "https://racetime.ro/events/194/register",
     external: true,
@@ -6,6 +7,14 @@ export const events = [
     title: "Crosul Speranței",
     img: "/images/evenimente/crosulsperantei.webp",
     date: "3 OCTOMBRIE",
+  },
+  {
+    href: "https://www.facebook.com/events/1673145554331285/",
+    external: true,
+    eyebrow: "CHEILE TURENILOR",
+    title: "Mioritic Coffee Run",
+    img: "/images/evenimente/mioritic.webp",
+    date: "18 Octombrie",
   },
   {
     href: "/autism24h",
@@ -39,6 +48,7 @@ export const events = [
     img: "/images/evenimente/alergari_iulie.webp",
     date: "MEDIAȘ • FINALIZAT",
   },
+  
 ];
 
 export const brhEvents = [
