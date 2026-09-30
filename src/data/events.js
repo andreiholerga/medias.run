@@ -1,5 +1,4 @@
 export const events = [
-  
   {
     href: "https://racetime.ro/events/194/register",
     external: true,
