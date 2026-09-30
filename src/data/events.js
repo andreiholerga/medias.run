@@ -9,6 +9,14 @@ export const events = [
     date: "3 OCTOMBRIE",
   },
   {
+    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
+    external: true,
+    eyebrow: "MEDIAȘ",
+    title: "Cros Binder",
+    img: "/images/evenimente/cros_binder.webp",
+    date: "17 Octombrie",
+  },
+  {
     href: "https://www.facebook.com/events/1673145554331285/",
     external: true,
     eyebrow: "CHEILE TURENILOR",
