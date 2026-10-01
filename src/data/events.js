@@ -23,6 +23,14 @@ export const events = [
     img: "/images/evenimente/mioritic.webp",
     date: "18 Octombrie",
   },
+  /*{
+    href: "",
+    external: true,
+    eyebrow: "Mediaș",
+    title: "Mediaș Coffee Run",
+    img: "/images/evenimente/medias_coffee_run.webp",
+    date: "6 Decembrie",
+  },*/
   {
     href: "/autism24h",
     external: false,
