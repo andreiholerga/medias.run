@@ -4,6 +4,7 @@ import GallerySlider from "../components/GallerySlider.jsx";
 import HighFiveButton from "../components/HighFiveButton.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
 import {events, brhEvents} from "../data/events.js";
+import Formular230 from "../components/Formular230.jsx";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <p className="text-paper/80 max-w-lg text-base md:text-lg mb-8">
            Un nou început. Aceeași pasiune. Un proiect care merge mai departe.
           </p>
+          <Formular230 className="bg-trail text-paper font-display font-bold uppercase tracking-wide px-8 py-4 hover:bg-paper hover:text-ink transition-colors" />
 
         </div>
       </section>
