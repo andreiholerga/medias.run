@@ -1,20 +1,5 @@
 export const events = [
-  {
-    href: "https://racetime.ro/events/194/register",
-    external: true,
-    eyebrow: "BLAJ",
-    title: "Crosul Speranței",
-    img: "/images/evenimente/crosulsperantei.webp",
-    date: "3 OCTOMBRIE",
-  },
-  {
-    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
-    external: true,
-    eyebrow: "MEDIAȘ",
-    title: "Cros Binder",
-    img: "/images/evenimente/cros_binder.webp",
-    date: "17 Octombrie",
-  },
+  
   {
     href: "https://www.facebook.com/events/1673145554331285/",
     external: true,
@@ -23,14 +8,6 @@ export const events = [
     img: "/images/evenimente/mioritic.webp",
     date: "18 Octombrie",
   },
-  /*{
-    href: "",
-    external: true,
-    eyebrow: "Mediaș",
-    title: "Mediaș Coffee Run",
-    img: "/images/evenimente/medias_coffee_run.webp",
-    date: "6 Decembrie",
-  },*/
   {
     href: "/autism24h",
     external: false,
@@ -67,6 +44,22 @@ export const events = [
 ];
 
 export const brhEvents = [
+  {
+    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
+    external: true,
+    eyebrow: "MEDIAȘ",
+    title: "Cros Binder",
+    img: "/images/evenimente/cros_binder.webp",
+    date: "17 Octombrie",
+  },
+  {
+  href: "https://www.facebook.com/permalink.php?story_fbid=pfbid02TxyRUFDcKRxBiepxTUV5g9dMBLYvFNrNPogJyXttLCkLPwbVyPEJzeAomHRLDGKal&id=61571813673482",
+  external: true,
+  eyebrow: "Mediaș",
+  title: "Mediaș Coffee Run",
+  img: "/images/evenimente/medias_coffee_run.webp",
+  date: "6 Decembrie",
+  },
   {
     href: "/summertrails",
     external: false,
