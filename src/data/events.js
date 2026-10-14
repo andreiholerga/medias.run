@@ -45,7 +45,7 @@ export const events = [
 
 export const brhEvents = [
   {
-    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
+    href: "https://dianthusmedias.ro/2026/10/12/crosul-binder-editia-a-x-a-editia-prieteniei/",
     external: true,
     eyebrow: "MEDIAȘ",
     title: "Cros Binder",
