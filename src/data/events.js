@@ -1,13 +1,4 @@
 export const events = [
-  
-  {
-    href: "https://www.facebook.com/events/1673145554331285/",
-    external: true,
-    eyebrow: "CHEILE TURENILOR",
-    title: "Mioritic Coffee Run",
-    img: "/images/evenimente/mioritic.webp",
-    date: "18 Octombrie",
-  },
   {
     href: "/autism24h",
     external: false,
@@ -45,14 +36,6 @@ export const events = [
 
 export const brhEvents = [
   {
-    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
-    external: true,
-    eyebrow: "MEDIAȘ",
-    title: "Cros Binder",
-    img: "/images/evenimente/cros_binder.webp",
-    date: "17 Octombrie",
-  },
-  {
   href: "https://www.facebook.com/permalink.php?story_fbid=pfbid02TxyRUFDcKRxBiepxTUV5g9dMBLYvFNrNPogJyXttLCkLPwbVyPEJzeAomHRLDGKal&id=61571813673482",
   external: true,
   eyebrow: "Mediaș",
@@ -67,6 +50,14 @@ export const brhEvents = [
     title: "SUMMER TRAILS",
     img: "/images/evenimente/summertrails-thumbnail.webp",
     date: "19 IUNIE 2027",
+  },
+  {
+    href: "https://www.facebook.com/events/s/crosul-binder-editia-prietenie/2586223415158360",
+    external: true,
+    eyebrow: "MEDIAȘ",
+    title: "Cros Binder",
+    img: "/images/evenimente/cros_binder.webp",
+    date: "FINALIZAT",
   }
 ];
 
