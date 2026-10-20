@@ -8,14 +8,6 @@ export const events = [
     date: "FINALIZAT",
   },
   {
-    href: "/coffeerunandwine",
-    external: false,
-    eyebrow: "PARTENER",
-    title: "Coffee Run & Wine",
-    img: "/images/evenimente/coffeerunandwine-afis.webp",
-    date: "MEDIAȘ • FINALIZAT",
-  },
-  {
     href: "/coffeerun",
     external: false,
     eyebrow: "PARTENER",
@@ -58,6 +50,14 @@ export const brhEvents = [
     title: "Cros Binder",
     img: "/images/evenimente/cros_binder.webp",
     date: "FINALIZAT",
+  },
+  {
+    href: "/coffeerunandwine",
+    external: false,
+    eyebrow: "PARTENER",
+    title: "Coffee Run & Wine",
+    img: "/images/evenimente/coffeerunandwine-afis.webp",
+    date: "MEDIAȘ • FINALIZAT",
   }
 ];
 
