@@ -47,7 +47,7 @@ export default function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-5 md:px-10 py-3">
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center pr-5 gap-2 shrink-0">
         <Link to="/" >
           <img src="/logo/logo.webp" alt="Binderbubi Backyard Running" className="h-12 w-auto" />
         </Link>
