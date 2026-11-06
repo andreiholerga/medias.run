@@ -163,7 +163,7 @@ export const summerTrailsRoutes = [
   {
     id: 1,
     name: "Traseu #1",
-    tag: "21 KM • TRAIL",
+    tag: "24 KM • TRAIL",
     km: 24,
     elevation: 684,
     surface: "trail",
@@ -174,8 +174,8 @@ export const summerTrailsRoutes = [
   {
     id: 2,
     name: "Traseu #2",
-    tag: "7.15 KM • TRAIL",
-    km: 11,
+    tag: "12 KM • TRAIL",
+    km: 12,
     elevation: 348,
     surface: "trail",
     images: ["/images/trasee/summerTrails/3.webp", "/images/trasee/summerTrails/4.webp"],
