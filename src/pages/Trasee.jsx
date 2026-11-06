@@ -1,4 +1,4 @@
-import routes from "../data/routes.js";
+import {routes} from "../data/routes.js";
 import RouteCard from "../components/RouteCard.jsx";
 
 export default function Trasee() {

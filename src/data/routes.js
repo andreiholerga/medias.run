@@ -1,4 +1,4 @@
-const routes = [
+export const routes = [
   {
     id: 1,
     name: "Traseu #1",
@@ -158,4 +158,52 @@ Este un traseu variat, cu peisaje frumoase și porțiuni tehnice, ideal pentru a
   },
 ];
 
-export default routes;
+
+export const summerTrailsRoutes = [
+  {
+    id: 1,
+    name: "Traseu #1",
+    tag: "21 KM • TRAIL",
+    km: 24,
+    elevation: 684,
+    surface: "trail",
+    images: ["/images/trasee/summerTrails/1.webp", "/images/trasee/summerTrails/2.webp"],
+    gpx: "/trasee/summerTrailsRoutes/SummerTrailsMedias_24k.gpx",
+    description: ``,
+  },
+  {
+    id: 2,
+    name: "Traseu #2",
+    tag: "7.15 KM • TRAIL",
+    km: 11,
+    elevation: 348,
+    surface: "trail",
+    images: ["/images/trasee/summerTrails/3.webp", "/images/trasee/summerTrails/4.webp"],
+    gpx: "/trasee/summerTrailsRoutes/SummerTrailsMedias_12k.gpx",
+    description: ``,
+  },
+  {
+    id: 3,
+    name: "Traseu #3",
+    tag: "6.5 KM • TRAIL",
+    km: 6.5,
+    elevation: 155,
+    surface: "trail",
+    images: ["/images/trasee/summerTrails/5.webp", "/images/trasee/summerTrails/6.webp"],
+    gpx: "/trasee/summerTrailsRoutes/SummerTrailsMedias_6.5k.gpx",
+    description: ``,
+  },
+  {
+    id: 4,
+    name: "Family Run",
+    tag: "1.4 KM • Trail",
+    km: 1.4,
+    elevation: 34,
+    surface: "trail",
+    images: ["/images/trasee/summerTrails/7.webp", "/images/trasee/summerTrails/8.webp"],
+    gpx: "/trasee/summerTrailsRoutes/SummerTrailsMedias_FamilyRun.gpx",
+
+    description: ``,
+  }
+];
+

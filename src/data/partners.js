@@ -87,6 +87,18 @@ export const summerTrailsOrganizers = [
   }
 ];
 
+export const summerTrailsPartners = [
+    {
+    name: "Centrul-Medical-SMD-Copșa-Mică",
+    href: "https://www.facebook.com/p/Centrul-Medical-SMD-Cop%C8%99a-Mic%C4%83-61557971640465/",
+    img: "/images/logo-smd.webp",
+  },
+  { name: "Lilu Twins Oil", href: "#" },
+  {name: "Daas Taxcont", 
+    href: "https://www.facebook.com/DaasTaxcontMedias/",
+  img: "/images/daastaxcont.webp",}
+];
+
 export const autismPartners = [
   {
     name: "The Bean Roasters",

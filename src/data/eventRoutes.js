@@ -10,3 +10,4 @@ export const coffeeRunWineRoutes = [
   { img: "/images/trasee/coffeerunandwine/CoffeeRun.webp", tag: "2.25 KM", name: "Coffee Run", gpx: "/trasee/coffeerunandwine/CoffeeRun.gpx" },
   { img: "/images/trasee/coffeerunandwine/KidsRun.webp", tag: "650 M", name: "Kids Run", gpx: "/trasee/coffeerunandwine/KidsRun.gpx" },
 ];
+

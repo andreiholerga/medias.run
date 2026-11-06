@@ -15,7 +15,7 @@ export default function RouteCard({ route }) {
 
   return (
     <div className="group flex flex-col bg-white border border-ink/10 hover:border-trail transition-colors">
-      <div className="relative h-56 overflow-hidden bg-ink/10">
+      <div className="relative aspect-[4/3] overflow-hidden bg-ink/10">
         {route.images.map((img, i) => (
           <img
             key={img}
@@ -53,7 +53,6 @@ export default function RouteCard({ route }) {
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-center justify-between mb-1">
           <span className="font-mono text-xs text-trail tracking-wide">{route.tag}</span>
-          <ElevationSpark gain={route.elevation} seed={route.id} className="w-16 h-5 text-moss" />
         </div>
         <h3 className="font-display font-bold text-2xl mb-1">{route.name}</h3>
         <p className="text-xs text-mist font-mono mb-3">+{route.elevation} m diferență de nivel</p>

@@ -2,7 +2,7 @@ import CountdownTimer from "../components/CountdownTimer.jsx";
 import MiniRouteCard from "../components/MiniRouteCard.jsx";
 import PartnersSection from "../components/PartnersSection.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
-import { coffeeRunWineRoutes } from "../data/coffeeRunRoutes.js";
+import { coffeeRunWineRoutes } from "../data/eventRoutes.js";
 import { coffeeRunWineOrganizers } from "../data/partners.js";
 
 const EVENT_DATE = new Date("August 29, 2026 09:30:00");
