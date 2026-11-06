@@ -35,6 +35,7 @@ export default function App() {
             <Route path="/coffeerun" element={<CoffeeRun />} />
             <Route path="/coffeerunandwine" element={<CoffeeRunAndWine />} />
             <Route path="/summertrails" element={<MediasSummerTrails />} />
+            <Route path="/mst" element={<MediasSummerTrails />} />
             <Route path="/asociatie" element={<BinderbubiRunHike />} />
             <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
