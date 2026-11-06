@@ -16,7 +16,7 @@ export default function MediasSummerTrails() {
       <title>Mediaș Summer Trails 2027</title>
       <section className="bg-[#ff751f]">
         <img
-          src="/images/evenimente/summertrails1.png"
+          src="/images/evenimente/summertrails1.webp"
           alt="Coffee Run & Wine"
           fetchpriority="high"
           className="w-full md:max-w-[66%] h-auto mx-auto"
