@@ -6,6 +6,7 @@ import { summerTrailsRoutes } from "../data/routes.js";
 import { summerTrailsOrganizers } from "../data/partners.js";
 import { summerTrailsPartners } from "../data/partners.js";
 import RouteCard from "../components/RouteCard.jsx";
+import ChallengeTeaser from "../components/ChallengeTeaser.jsx";
 
 const EVENT_DATE = new Date("June 19, 2027 09:30:00");
 
@@ -38,6 +39,9 @@ export default function MediasSummerTrails() {
           Start înscrieri: 7 Decembrie 2026
         </h2>
       </section>
+      
+      <ChallengeTeaser />
+
 
       <section className="max-w-3xl mx-auto px-6 py-10">
           <h2 className="font-display text-2xl font-black uppercase mb-4">

@@ -14,6 +14,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import MediasSummerTrails from "./pages/MediasSummerTrails.jsx";
 import BinderbubiRunHike from "./pages/BinderbubiRunHike.jsx";
+import Provocare from "./pages/Provocare.jsx";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/asociatie" element={<BinderbubiRunHike />} />
             <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/provocare" element={<Provocare />} />
           </Routes>
         </main>
         
