@@ -5,7 +5,7 @@ const LINKS = [
   { to: "/", label: "Acasă" },
   { to: "/asociatie", label: "Binderbubi Run & Hike" },
   { to: "/asociatie#evenimenteBRH", label: "Evenimente organizate" },
-  { to: "/asociatie#evenimenteBRH", label: "Evenimente în zonă" },
+  { to: "/#evenimente", label: "Evenimente în zonă" },
   { to: "/#despre-noi", label: "Despre Noi" },
   { to: "/#activitate", label: "Activitate" },
   { to: "/trasee", label: "Trasee" },
