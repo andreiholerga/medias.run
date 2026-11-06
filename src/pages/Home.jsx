@@ -4,6 +4,7 @@ import GallerySlider from "../components/GallerySlider.jsx";
 import HighFiveButton from "../components/HighFiveButton.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
 import {events, brhEvents} from "../data/events.js";
+import ChallengeTeaser from "../components/ChallengeTeaser.jsx";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         </div>
       </section>
       <TopoDivider className="-mt-1" />
+      <ChallengeTeaser />
       <section
         id="anunturi"
         className="max-w-6xl mx-auto px-6 py-8 md:py-10"
@@ -48,6 +50,7 @@ export default function Home() {
           ANUNȚURI<span className="text-trail">.</span>
         </h2>
         <div className="grid md:grid-cols-1">
+          
           <Link
             to="/asociatie"
             className="group border border-ink/10 bg-white p-8 hover:border-trail hover:shadow-xl hover:-translate-y-1 transition-all"
