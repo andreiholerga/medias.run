@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLightbox } from "../components/Lightbox.jsx";
 
 // ====== DE COMPLETAT ======
-const FORM_URL = "#"; // linkul Google Forms pentru înscriere
+const FORM_URL = "https://forms.gle/dLbJozpEtnwXq4Vh8"; // linkul Google Forms pentru înscriere
 const EXAMPLE_IMG = "/images/exemplu.webp"; // poza cu traseul exemplu
 const OPERATOR = {
   sediu: "Carpenului 16 ap.2, Mediaș",
@@ -130,7 +130,7 @@ export default function Provocare() {
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-[#ff751f] text-ink font-display font-bold uppercase tracking-wide px-8 py-4 hover:bg-paper transition-colors"
           >
-            Acceptă provocarea
+            Trimite un traseu
           </a>
         )}
       </div>
