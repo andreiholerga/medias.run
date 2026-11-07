@@ -13,11 +13,12 @@ const EVENT_DATE = new Date("June 19, 2027 09:30:00");
 export default function MediasSummerTrails() {
   return (
     <main className="bg-[#fadfce]">
-      <title>Mediaș Summer Trails 2027</title>
+      <title>Mediaș Summer Trails | MST 2027</title>
+      <meta name="description" content="MST 2027 - Mediaș - 19 iunie 2027 - 24k - 12k - 6.5k - Family run - Trasee, Natură, Provocare, Comunitate."></meta>
       <section className="bg-[#ff751f]">
         <img
           src="/images/evenimente/summertrails1.webp"
-          alt="Coffee Run & Wine"
+          alt="Mediaș Summer Trails MST 2027. 19 Iunie 2027. Curse: 24k, 12k, 6.5k, Family run"
           fetchpriority="high"
           className="w-full md:max-w-[66%] h-auto mx-auto"
         />
@@ -36,7 +37,7 @@ export default function MediasSummerTrails() {
         </h2>
         <br></br>
         <h2 className="font-display text-2xl md:text-3xl text-[#ff751f] mb-2">
-          Start înscrieri: 7 Decembrie 2026
+          Start înscrieri MST: 7 Decembrie 2026
         </h2>
       </section>
       
