@@ -24,6 +24,7 @@ const RULES = [
   "Poți face oricâte încercări dorești pe toată durata provocării.",
   "Câștigătorul va fi participantul care realizează cel mai lung traseu valid.",
   "Distanța luată în considerare va fi cea validată de organizatori în urma verificării înregistrării GPS.",
+  "Acordarea voucherului este condiționată de transmiterea a cel puțin trei trasee validate de către participanți distincți.",
 ];
 
 const STEPS = [
