@@ -28,8 +28,8 @@ export const events = [
 
 export const brhEvents = [
   {
-  href: "https://www.facebook.com/permalink.php?story_fbid=pfbid02TxyRUFDcKRxBiepxTUV5g9dMBLYvFNrNPogJyXttLCkLPwbVyPEJzeAomHRLDGKal&id=61571813673482",
-  external: true,
+  href: "/coffeerun",
+  external: false,
   eyebrow: "Mediaș",
   title: "Mediaș Coffee Run",
   img: "/images/evenimente/medias_coffee_run.webp",
