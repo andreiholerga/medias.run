@@ -11,6 +11,8 @@ export default function CoffeeRun() {
   return (
     <main className="bg-[#ededed]">
       <title>Mediaș Coffee Run | 6 Decembrie</title>
+      <meta name="description" content="Pe 6 decembrie 2026, ora 13:00, Aterm și Primăria Municipiului Mediaș susțin un eveniment dedicat sportului și solidarității: Medias Coffee Run."></meta>
+      
       <img
         src="/images/evenimente/coffeerun6dec.webp"
         alt="Mediaș Coffee Run"
