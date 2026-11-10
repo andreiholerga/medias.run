@@ -2,17 +2,17 @@ import CountdownTimer from "../components/CountdownTimer.jsx";
 import MiniRouteCard from "../components/MiniRouteCard.jsx";
 import PartnersSection from "../components/PartnersSection.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
-import { coffeeRunRoutes } from "../data/eventRoutes.js";
-import { coffeeRunOrganizers, coffeeRunPartners } from "../data/partners.js";
+import { coffeeRunRoutes6Dec } from "../data/eventRoutes.js";
+import { coffeeRunOrganizers6Dec, coffeeRunBeneficiari6Dec } from "../data/partners.js";
 
-const EVENT_DATE = new Date("June 1, 2026 13:00:00");
+const EVENT_DATE = new Date("December 6, 2026 13:00:00");
 
 export default function CoffeeRun() {
   return (
-    <main className="bg-[#fff0e3]">
-      <title>Coffee Run | Binderbubi Run & Hike</title>
+    <main className="bg-[#ededed]">
+      <title>Mediaș Coffee Run | 6 Decembrie</title>
       <img
-        src="/images/evenimente/coffeerun.webp"
+        src="/images/evenimente/coffeerun6dec.webp"
         alt="Mediaș Coffee Run"
         fetchpriority="high"
         className="w-full"
@@ -25,38 +25,16 @@ export default function CoffeeRun() {
 
       <section className="max-w-2xl mx-auto px-6 pb-10 text-center">
         <h2 className="font-display text-3xl md:text-4xl font-black uppercase mb-2">
-          1 Iunie, Ora <span className="text-trail">13:00</span>
+          6 Decembrie, Ora <span className="text-trail">13:00</span>
         </h2>
-        <h3 className="font-display text-xl font-bold mb-4">Taxă de participare: 30 lei</h3>
-        <p className="text-sm text-ink/60 mb-1">
-          * Înscriere gratuită pentru copiii sub 14 ani (înscrierea este necesară și în cazul
-          acestora)
-        </p>
-        <p className="text-sm text-ink/60 mb-6">
-          * Înscrierea se face la Bean Roasters Centru (Strada Petőfi Sándor 2) sau la Coffee CooP
-          (Strada Axente Sever 29)
-        </p>
+        <h3 className="font-display text-xl font-bold mb-4">SUB 10 ANI: Gratuit</h3>
+        <h3 className="font-display text-xl font-bold mb-4">10-16 ANI: 20 lei</h3>
+        <h3 className="font-display text-xl font-bold mb-4">16+ ANI: 30 lei</h3>
 
-        <p className="text-trail font-semibold mb-4">
-          Pentru participarea la eveniment este necesară completarea declarației pe proprie
-          răspundere:
+        <p className="text-sm text-ink/60 mb-6">
+          * Înscrierile se fac fizic la: Bean Centru, Bean Kaufland și Bean Avram Iancu
         </p>
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <a
-            href="/declaratii/declaratie_coffee_run.doc"
-            download
-            className="inline-flex items-center gap-2 bg-ink text-paper text-xs font-display font-bold uppercase tracking-wide px-5 py-3 hover:bg-trail transition-colors"
-          >
-            <span>⬇</span> Declarație
-          </a>
-          <a
-            href="/declaratii/declaratie_coffeerun_minori.doc"
-            download
-            className="inline-flex items-center gap-2 bg-ink text-paper text-xs font-display font-bold uppercase tracking-wide px-5 py-3 hover:bg-trail transition-colors"
-          >
-            <span>⬇</span> Declarație Minori
-          </a>
-        </div>
+  
 
         <a
           href="https://maps.app.goo.gl/5a2LcmwQRNUs2wGx9"
@@ -65,9 +43,9 @@ export default function CoffeeRun() {
           className="block hover:opacity-80 transition-opacity"
         >
           <h2 className="font-display text-xl font-bold">
-            <span className="text-trail">Start:</span> Bean Roasters Mediaș
+            <span className="text-trail">Start:</span> Aterm
           </h2>
-          <h3 className="text-ink/60">Strada Petőfi Sándor nr. 2</h3>
+          <h3 className="text-ink/60">Strada Titus Andronic 160, Mediaș</h3>
         </a>
       </section>
 
@@ -76,34 +54,11 @@ export default function CoffeeRun() {
           Despre<span className="text-trail">.</span>
         </h2>
         <p className="text-ink/70 leading-relaxed">
-          Coffee Run se va desfășura în data de <strong className="text-ink">1 iunie</strong> 📆 și
-          va include patru trasee, adaptate diferitelor niveluri de dificultate, desfășurate în
-          zona centrală a orașului.
-          <br />
-          <br />
-          Invităm toți medieșenii să se alăture în număr cât mai mare acestei inițiative care
-          promovează un stil de viață activ, implicarea comunității și performanțele tinerilor în
-          domeniul tehnologiei.
-          <br />
-          <br />
-          Evenimentul este organizat de The Bean Roasters, în parteneriat cu Coffee CooP și
-          Primăria Municipiului Mediaș.
-        </p>
-      </section>
-
-      <section className="max-w-3xl mx-auto px-6 pb-10">
-        <h2 className="font-display text-2xl font-black uppercase mb-4">
-          Scopul<span className="text-trail">.</span>
-        </h2>
-        <p className="text-ink/70 leading-relaxed">
-          Și la această ediție, evenimentul pune accent pe implicarea comunității 🤝 în dezvoltarea
-          și susținerea performanței, fondurile strânse urmând să fie donate pentru a susține
-          participarea echipei „The Resistance” la etapa europeană 🌍 a competiției FIRST Tech
-          Challenge.
-          <br />
-          <br />
-          Echipa se bucură deja de susținere din partea colegilor de la Liceul Teoretic „Roth –
-          Oberth”, dar și de la alte unități de învățământ medieșene.
+          Pe 6 decembrie 2026, ora 13:00, Aterm și Primăria Municipiului Mediaș susțin un eveniment dedicat sportului și solidarității: Medias Coffee Run.
+<br /><br />Evenimentul este organizat de Asociația Binderbubi Run & Hike și Bean Roasters Mediaș, iar componenta caritabilă este dedicată Centrului de Recuperare Pruncul Isus Mediaș și Asociației Sfântul Casian Mediaș.
+<br /><br />Obiectivul proiectului este strângerea a 30.000 de lei pentru burse lunare destinate specialiștilor care lucrează în terapia și recuperarea copiilor cu dizabilități – pentru atragerea și păstrarea terapeuților, creșterea calității serviciilor și sprijinirea unui număr cât mai mare de copii.
+<br /><br />Toate încep cu un prim pas. Iar primul pas îl facem împreună, pe 6 decembrie.
+4 km • 10 km • 500 m copii | Aterm, Mediaș | 13:00
         </p>
       </section>
 
@@ -112,30 +67,16 @@ export default function CoffeeRun() {
           Trasee<span className="text-trail">.</span>
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {coffeeRunRoutes.map((r) => (
+          {coffeeRunRoutes6Dec.map((r) => (
             <MiniRouteCard key={r.name} route={r} accent="text-[#AC0000]" />
           ))}
         </div>
       </section>
 
-      <section className="max-w-2xl mx-auto px-6 pb-16 text-center">
-        <h2 className="font-display text-2xl font-black uppercase mb-6">
-          Susține echipa<span className="text-trail">.</span>
-        </h2>
-        <a
-          href="https://buy.stripe.com/aFa9AU7JNgM67LS3TT1ZS00"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 bg-trail text-paper font-display font-bold uppercase tracking-wide px-10 py-4 hover:bg-ink transition-colors"
-        >
-          Donează
-        </a>
-      </section>
-
       <TopoDivider />
       <section className="max-w-5xl mx-auto px-6 pb-16">
-        <PartnersSection label="Organizatori" items={coffeeRunOrganizers} />
-        <PartnersSection label="Parteneri" items={coffeeRunPartners} />
+        <PartnersSection label="Organizatori" items={coffeeRunOrganizers6Dec} />
+        <PartnersSection label="Beneficiari" items={coffeeRunBeneficiari6Dec} />
       </section>
     </main>
   );

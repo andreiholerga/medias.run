@@ -11,3 +11,9 @@ export const coffeeRunWineRoutes = [
   { img: "/images/trasee/coffeerunandwine/KidsRun.webp", tag: "650 M", name: "Kids Run", gpx: "/trasee/coffeerunandwine/KidsRun.gpx" },
 ];
 
+export const coffeeRunRoutes6Dec = [
+  { img: "/images/trasee/coffeerunAterm/10k.jpeg", tag: "10.0 KM", name: "Long Black Run", gpx: "/trasee/coffeerunAterm/10k_coffeerun_aterm.gpx"},
+  { img: "/images/trasee/coffeerunAterm/5k.jpeg", tag: "5.0 KM", name: "Espresso Run", gpx: "/trasee/coffeerunAterm/5k_coffeerun_aterm.gpx"},
+  { img: "/images/trasee/coffeerunAterm/cursa_copiilor.jpeg", tag: "500 m", name: "Cursa Copiilor", gpx: "/trasee/coffeerunAterm/cursa_copiilor_aterm.gpx"},
+];
+

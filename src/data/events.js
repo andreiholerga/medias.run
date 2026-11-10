@@ -8,7 +8,7 @@ export const events = [
     date: "FINALIZAT",
   },
   {
-    href: "/coffeerun",
+    href: "/coffeerun2",
     external: false,
     eyebrow: "PARTENER",
     title: "Coffee Run",

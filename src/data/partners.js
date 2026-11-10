@@ -144,3 +144,64 @@ export const autismPartners = [
   },
   { name: "Lilu Twins Oil", href: "#" },
 ];
+
+export const coffeeRunOrganizers6Dec = [
+  {
+    name: "Aterm",
+    href: "https://aterm.ro",
+    img: "/images/aterm.webp",
+  },
+  {
+    name: "Primăria Municipiului Mediaș",
+    href: "http://www.primariamedias.ro",
+    img: "/images/logo-primaria-medias.webp",
+  },
+  {
+    name: "The Bean Roasters",
+    href: "https://beancoffee.ro",
+    img: "/images/logo-bean-roasters.webp",
+  },
+  {
+    name: "Coffee Coop",
+    href: "https://www.coffeecoop.ro",
+    img: "/images/logo-coffee-coop.webp",
+  },
+  {
+    name: "Binderbubi Run & Hike",
+    href: "https://medias.run",
+    img: "/images/logo-brh.webp",
+  },
+  {
+    name: "Clinica Noemi Med",
+    href: "https://noemimed.ro",
+    img: "/images/noemimed.webp",
+  },
+  {
+    name: "Bit Trans",
+    href: "https://www.facebook.com/p/SC-BIT-TRANS-SRL-100054499597647/",
+    img: "/images/bittrans.webp",
+  },
+  {
+    name: "Centrul-Medical-SMD-Copșa-Mică",
+    href: "https://www.facebook.com/p/Centrul-Medical-SMD-Cop%C8%99a-Mic%C4%83-61557971640465/",
+    img: "/images/logo-smd.webp",
+  },
+  {
+    name: "SC Emailul SA",
+    href: "https://www.emailul-medias.ro",
+    img: "/images/emailul_logo.webp",
+  },
+];
+
+export const coffeeRunBeneficiari6Dec = [
+  {
+    name: "Asociația Sfântul Casian",
+    href: "https://asca.ro/ro/",
+    img: "/images/casian.webp",
+  },
+  {
+    name: "Caritas",
+    href: "https://www.facebook.com/CaritasRomania/",
+    img: "/images/caritas.webp",
+  },
+];
