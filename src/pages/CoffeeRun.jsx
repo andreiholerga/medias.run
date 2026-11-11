@@ -77,6 +77,83 @@ export default function CoffeeRun() {
         </p>
       </section>
 
+      <section className="max-w-3xl mx-auto px-6 py-10">
+        <h2 className="font-display text-2xl font-black uppercase mb-4">
+          Regulament<span className="text-trail">.</span>
+        </h2>
+<p>
+📅 6 Decembrie 2026<br />
+📍 Mediaș- Aterm<br />
+🕧 Start eveniment: 12:30<br /><br />
+Vă invităm la o alergare caritabilă dedicată mișcării, comunității și, cel mai important, ajutorării celor care au nevoie de noi!<br />
+!! Evenimentul nu este o competiție!<br />
+!! Nu există clasamente sau timpi oficiali!! <br />
+Fiecare participant este încurajat să parcurgă traseul ales în ritmul propriu și să se bucure de experiență.<br /><br />
+🏃 TRASEE<br />
+Aveți la dispoziție trei variante:<br />
+🔹 4-5 km – UȘOR<br />
+Traseu accesibil tuturor, potrivit inclusiv pentru cei care sunt la început.<br />
+🔹 10 km – UȘOR/Mediu<br />
+Traseu cu aproximativ 100 m diferență de nivel, recomandat persoanelor obișnuite cu alergarea pe teren variat și cu urcările.<br /><br />
+📝 ÎNSCRIERI<br />
+Înscrierile se fac fizic până la data de 5 decembrie la <br />
+📍 The Bean Centru <br />
+📍 The Bean Avram Iancu<br />
+The Bean kaufland <br /><br />
+💰 Taxa de participare<br />
+👧 Copii până la 10 ani: gratuit<br />
+🧒 10–16 ani: 20 lei – donație<br />
+🧑 16+ ani: 30 lei<br />
+Înscrierile efectuate la fața locului, în ziua evenimentului, presupun o taxă suplimentară de 10 lei.<br />
+O mare parte din sumele colectate reprezintă donații pentru cauza caritabilă !<br /><br />
+👨‍👩‍👧 PARTICIPAREA COPIILOR<br />
+Copii de sub 10 ani se pot inscrie la cursa copiilor de 500 m! <br />
+Copiii cu vârsta între 10 și 14 ani nu pot participa neînsoțiți și trebuie să fie însoțiți pe traseu de un adult responsabil.<br /><br />
+🎒 ECHIPAMENT <br />
+Pentru siguranța tuturor participanților, este recomandat să aveți:<br />
+👟 Pantofi de alergare cu talpă cu profil montan<br />
+📱 Telefon mobil, cu bateria suficient de încărcată !<br />
+💧 Recipient propriu pentru apă – la punctele de hidratare nu vor fi disponibile pahare<br />
+🍫 Cel puțin un gel și/sau baton nutritiv<br /><br />
+Recomandăm să aveți la voi:<br />
+☀️ cremă de protecție solară;<br />
+🌬️ foiță de vânt;<br />
+🧢 bentiță / buff / șapcă;<br />
+🏥 asigurare medicală valabilă în ziua evenimentului;<br /><br />
+🐕 ANIMALE DE COMPANIE<br />
+Participarea cu animale de companie NU ESTE PERMISĂ întrucât există ferme si alți câini in zonă!<br />
+Traseele pot include zone în care participanții se pot întâlni cu câini, iar pentru siguranța participanților și a animalelor, accesul cu animale de companie pe traseele evenimentului este interzis.<br />
+În cazul întâlnirii cu câini pe traseu, participanții sunt rugați să păstreze calmul, să evite interacțiunea cu aceștia și să urmeze indicațiile voluntarilor, dacă aceștia sunt prezenți.<br /><br />
+🌿 COMPORTAMENT PE TRASEU<br />
+Pentru ca toată lumea să se bucure de eveniment, vă rugăm:<br />
+să respectați marcajele și indicațiile organizatorilor și voluntarilor;<br />
+să nu părăsiți traseul stabilit;<br />
+să nu aruncați deșeuri pe traseu;<br />
+să respectați natura și proprietățile din zonă;<br />
+să acordați atenție celorlalți participanți;<br />
+să urmați indicațiile organizatorilor în cazul unor situații neprevăzute.<br />
+Vă rugăm să păstrăm traseul curat. Dacă ați venit cu un ambalaj, îl puteți păstra până la următorul punct de colectare.<br /><br />
+⚠️ SIGURANȚĂ ȘI RESPONSABILITATE<br />
+Participarea la eveniment se face pe propria răspundere.<br />
+Minorii au nevoie de acordul părinților!<br />
+Fiecare participant este responsabil să aleagă traseul în funcție de propria condiție fizică, experiență și starea de sănătate.<br />
+În cazul unor condiții meteorologice nefavorabile sau al altor situații care pot pune în pericol participanții, organizatorii își rezervă dreptul de a modifica traseele, ora de start, de a amâna sau de a opri evenimentul, dacă situația o impune.<br /><br />
+📸 FOTO & VIDEO<br />
+Pe parcursul evenimentului pot fi realizate fotografii și materiale video.<br />
+Prin participarea la eveniment, sunteți de acord ca imaginile realizate în timpul acestuia să poată fi utilizate în scopul promovării evenimentului caritabil și a cauzei susținute.<br /><br />
+❤️ DESPRE EVENIMENT<br />
+Această alergare nu este despre cine ajunge primul.<br />
+Cursa este fara cronometraj!<br />
+Este despre mișcare, oameni, comunitate și dorința de a face un bine împreună.<br />
+Fie că alegi 4  sau 10 km, fiecare pas contează.<br />
+Ne vedem pe 6 Decembrie! 🏃‍♀️🏃‍♂️❤️<br />
+Start: 12:30 | Aterm, Mediaș <br /><br />
+📞 CONTACT<br />
+0740 649 378
+</p>
+
+      </section>
+
       <section className="max-w-5xl mx-auto px-6 pb-16">
         <h2 className="font-display text-2xl font-black uppercase mb-6">
           Trasee<span className="text-trail">.</span>
