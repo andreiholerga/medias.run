@@ -49,6 +49,19 @@ export default function CoffeeRun() {
           </h2>
           <h3 className="text-ink/60">Strada Titus Andronic 160, Mediaș</h3>
         </a>
+        <br />
+        <p className="text-trail font-semibold mb-4">
+          Descarcă regulamentul:
+        </p>
+        <div className="flex flex-wrap justify-center mb-8">
+          <a
+            href="/regulament/regulament_medias_coffee_run.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-ink text-paper text-xs font-display font-bold uppercase tracking-wide px-5 py-3 hover:bg-trail transition-colors"
+          >
+            <span>⬇</span> Regulament
+          </a>
+        </div>
       </section>
 
       <section className="max-w-3xl mx-auto px-6 py-10">
