@@ -77,6 +77,19 @@ export default function CoffeeRun() {
         </p>
       </section>
 
+      
+
+      <section className="max-w-5xl mx-auto px-6 pb-16">
+        <h2 className="font-display text-2xl font-black uppercase mb-6">
+          Trasee<span className="text-trail">.</span>
+        </h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {coffeeRunRoutes6Dec.map((r) => (
+            <MiniRouteCard key={r.name} route={r} accent="text-[#AC0000]" />
+          ))}
+        </div>
+      </section>
+
       <section className="max-w-3xl mx-auto px-6 py-10">
         <h2 className="font-display text-2xl font-black uppercase mb-4">
           Regulament<span className="text-trail">.</span>
@@ -152,17 +165,6 @@ Start: 12:30 | Aterm, Mediaș <br /><br />
 0740 649 378
 </p>
 
-      </section>
-
-      <section className="max-w-5xl mx-auto px-6 pb-16">
-        <h2 className="font-display text-2xl font-black uppercase mb-6">
-          Trasee<span className="text-trail">.</span>
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {coffeeRunRoutes6Dec.map((r) => (
-            <MiniRouteCard key={r.name} route={r} accent="text-[#AC0000]" />
-          ))}
-        </div>
       </section>
 
       <TopoDivider />
