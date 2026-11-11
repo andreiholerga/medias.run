@@ -199,6 +199,10 @@ export const coffeeRunPartners6Dec = [
     href: "https://www.emailul-medias.ro",
     img: "/images/emailul_logo.webp",
   },
+  {
+    name: "BMT Trans Construct",
+    href: "https://share.google/noZ23IcifTihHb5Ru",
+  },
 ];
 
 export const coffeeRunBeneficiari6Dec = [
