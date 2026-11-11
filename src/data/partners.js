@@ -171,6 +171,11 @@ export const coffeeRunOrganizers6Dec = [
     href: "https://www.facebook.com/p/SC-BIT-TRANS-SRL-100054499597647/",
     img: "/images/bittrans.webp",
   },
+  {
+    name: "Dianthus",
+    href: "https://dianthusmedias.ro",
+    img: "/images/logo-dianthus-medias.webp",
+  },
 ];
 
 export const coffeeRunPartners6Dec = [
@@ -193,11 +198,6 @@ export const coffeeRunPartners6Dec = [
     name: "SC Emailul SA",
     href: "https://www.emailul-medias.ro",
     img: "/images/emailul_logo.webp",
-  },
-  {
-    name: "Dianthus",
-    href: "https://dianthusmedias.ro",
-    img: "/images/logo-dianthus-medias.webp",
   },
 ];
 
