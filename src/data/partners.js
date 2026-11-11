@@ -162,24 +162,27 @@ export const coffeeRunOrganizers6Dec = [
     img: "/images/logo-bean-roasters.webp",
   },
   {
-    name: "Coffee Coop",
-    href: "https://www.coffeecoop.ro",
-    img: "/images/logo-coffee-coop.webp",
-  },
-  {
     name: "Binderbubi Run & Hike",
     href: "https://medias.run",
     img: "/images/logo-brh.webp",
   },
   {
-    name: "Clinica Noemi Med",
-    href: "https://noemimed.ro",
-    img: "/images/noemimed.webp",
-  },
-  {
     name: "Bit Trans",
     href: "https://www.facebook.com/p/SC-BIT-TRANS-SRL-100054499597647/",
     img: "/images/bittrans.webp",
+  },
+];
+
+export const coffeeRunPartners6Dec = [
+  {
+    name: "Coffee Coop",
+    href: "https://www.coffeecoop.ro",
+    img: "/images/logo-coffee-coop.webp",
+  },
+  {
+    name: "Clinica Noemi Med",
+    href: "https://noemimed.ro",
+    img: "/images/noemimed.webp",
   },
   {
     name: "Centrul-Medical-SMD-Copșa-Mică",
@@ -190,6 +193,11 @@ export const coffeeRunOrganizers6Dec = [
     name: "SC Emailul SA",
     href: "https://www.emailul-medias.ro",
     img: "/images/emailul_logo.webp",
+  },
+  {
+    name: "Dianthus",
+    href: "https://dianthusmedias.ro",
+    img: "/images/logo-dianthus-medias.webp",
   },
 ];
 

@@ -3,7 +3,7 @@ import MiniRouteCard from "../components/MiniRouteCard.jsx";
 import PartnersSection from "../components/PartnersSection.jsx";
 import TopoDivider from "../components/TopoDivider.jsx";
 import { coffeeRunRoutes6Dec } from "../data/eventRoutes.js";
-import { coffeeRunOrganizers6Dec, coffeeRunBeneficiari6Dec } from "../data/partners.js";
+import { coffeeRunOrganizers6Dec, coffeeRunPartners6Dec, coffeeRunBeneficiari6Dec } from "../data/partners.js";
 
 const EVENT_DATE = new Date("December 6, 2026 13:00:00");
 
@@ -78,6 +78,7 @@ export default function CoffeeRun() {
       <TopoDivider />
       <section className="max-w-5xl mx-auto px-6 pb-16">
         <PartnersSection label="Organizatori" items={coffeeRunOrganizers6Dec} />
+        <PartnersSection label="Parteneri" items={coffeeRunPartners6Dec} />
         <PartnersSection label="Beneficiari" items={coffeeRunBeneficiari6Dec} />
       </section>
     </main>
