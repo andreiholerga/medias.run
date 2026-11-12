@@ -29,6 +29,7 @@ export default function PrivacyPolicy() {
             <strong className="text-ink">Nu colectăm date cu caracter personal</strong> (nume,
             telefon, adrese) prin intermediul acestui site, deoarece nu folosim formulare de
             contact sau conturi de utilizator.
+            Numărăm vizitele în mod anonim, printr-un contor agregat pe zi, fără cookie-uri, adrese IP sau alți identificatori personali.
           </p>
         </section>
         <section>

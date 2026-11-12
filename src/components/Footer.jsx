@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TopoDivider from "./TopoDivider";
+import VisitStats from "./VisitStats.jsx";
 
 export default function Footer() {
   return (
@@ -22,6 +23,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+      <VisitStats />
       <div className="border-t border-paper/10 py-4 text-center">
         <a
           href="https://github.com/andreiholerga"

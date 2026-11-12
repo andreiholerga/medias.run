@@ -1,0 +1,18 @@
+{
+  "name": "medias-run",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "medias-run-views",
+      "database_id": "15823201-cd3d-445b-81c8-7cb761080438"
+    }
+  ]
+}
