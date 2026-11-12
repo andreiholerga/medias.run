@@ -288,6 +288,7 @@ export const coffeeRunPartners6Dec = [
     href: "https://www.instagram.com/dj_micu/",
   },
   { name: "Lilu Twins Oil", href: "#" },
+  { name: "Kendra Salon", href: "https://www.facebook.com/salon.kendra/" , img: "/images/kendra1.webp"},
 ];
 
 export const coffeeRunBeneficiari6Dec = [
