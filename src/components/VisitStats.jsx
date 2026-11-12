@@ -2,24 +2,22 @@ import { useEffect, useState } from "react";
 
 const fmt = (n) => Number(n).toLocaleString("ro-RO");
 
+// Variabila de modul se resetează la fiecare încărcare completă a paginii (refresh,
+// link nou, tab nou), dar rămâne la navigarea între pagini din site, deci:
+// refresh = +1 vizită, schimbarea paginii în site = nu se numără.
+let hitSent = false;
+
 export default function VisitStats() {
   const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    let counted = false;
-    try {
-      counted = sessionStorage.getItem("visit-counted") === "1";
-    } catch {}
+    const url = hitSent ? "/api/stats" : "/api/hit";
+    const method = hitSent ? "GET" : "POST";
+    hitSent = true;
 
-    // prima pagină din sesiune = o vizită; restul doar citesc
-    fetch("/api/" + (counted ? "stats" : "hit"), { method: counted ? "GET" : "POST" })
+    fetch(url, { method })
       .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((data) => {
-        setStats(data);
-        try {
-          sessionStorage.setItem("visit-counted", "1");
-        } catch {}
-      })
+      .then(setStats)
       .catch(() => {}); // în `npm run dev` API-ul nu există: componenta pur și simplu nu apare
   }, []);
 
