@@ -260,7 +260,7 @@ export const coffeeRunPartners6Dec = [
   },
   {
     name: "Sushi Mediaș",
-    href: "https://www.instagram.com/theglamhouse39",
+    href: "https://www.sushimedias.ro",
     img: "/images/sushimedias.webp",
   },
   {
@@ -281,6 +281,7 @@ export const coffeeRunPartners6Dec = [
   {
     name: "Flori de april",
     href: "https://www.facebook.com/FloriDeAprilMedias/",
+    img: "/images/florideapril.webp",
   },
   {
     name: "DJ Micu",
