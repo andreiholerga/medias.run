@@ -286,6 +286,7 @@ export const coffeeRunPartners6Dec = [
     name: "DJ Micu",
     href: "https://www.instagram.com/dj_micu/",
   },
+  { name: "Lilu Twins Oil", href: "#" },
 ];
 
 export const coffeeRunBeneficiari6Dec = [
