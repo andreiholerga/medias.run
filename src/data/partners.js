@@ -203,6 +203,89 @@ export const coffeeRunPartners6Dec = [
     name: "BMT Trans Construct",
     href: "https://share.google/noZ23IcifTihHb5Ru",
   },
+  {
+    name: "Diego",
+    href: "https://diego.ro/magazine/medias/",
+    img: "/images/diego.webp",
+  },
+  {
+    name: "Anomis",
+    href: "https://www.instagram.com/anomisballroom/",
+    img: "/images/anomis.webp",
+  },
+  {
+    name: "Trattoria Roma",
+    href: "https://www.pizza-trattoria-roma.ro",
+    img: "/images/trattoria.webp",
+  },
+  {
+    name: "Hanul Greweln",
+    href: "https://hanulgreweln.ro",
+    img: "/images/hanulgreweln.webp",
+  },
+  {
+    name: "Vinoteca Basarabia",
+    href: "https://www.instagram.com/vinoteca_basarabia_medias/",
+    img: "/images/vinotecabasarabia.webp",
+  },
+  {
+    name: "Big Pizza",
+    href: "https://www.bigpizza.ro/index.php",
+    img: "/images/bigpizza.webp",
+  },
+  {
+    name: "Hola Gourmet",
+    href: "https://www.instagram.com/holagourmet_",
+    img: "/images/holagourmet.webp",
+  },
+  {
+    name: "Salon Royal",
+    href: "https://salonroyal.ro",
+    img: "/images/salonroyal.webp",
+  },
+  {
+    name: "Medentis",
+    href: "https://clinicamedentis.ro/ro/",
+    img: "/images/medentis.webp",
+  },
+  {
+    name: "Viral Hair",
+    href: "https://viralhair.ro",
+    img: "/images/viralhair.webp",
+  },
+  {
+    name: "The Glam House",
+    href: "https://www.instagram.com/theglamhouse39",
+    img: "/images/glamhouse.webp",
+  },
+  {
+    name: "Sushi Mediaș",
+    href: "https://www.instagram.com/theglamhouse39",
+    img: "/images/sushimedias.webp",
+  },
+  {
+    name: "Nova TV Medias",
+    href: "https://novatv.ro",
+    img: "/images/logo-nova.webp",
+  },
+  {
+    name: "Contrast publicitate",
+    href: "https://contrast-publicitate.ro",
+    img: "/images/logo-contrast.webp",
+  },
+  {
+    name: "Radio City FM",
+    href: "https://city-fm.ro",
+    img: "/images/cityfm.webp",
+  },
+  {
+    name: "Flori de april",
+    href: "https://www.facebook.com/FloriDeAprilMedias/",
+  },
+  {
+    name: "DJ Micu",
+    href: "https://www.instagram.com/dj_micu/",
+  },
 ];
 
 export const coffeeRunBeneficiari6Dec = [
