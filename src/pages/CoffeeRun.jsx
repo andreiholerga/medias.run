@@ -83,7 +83,7 @@ export default function CoffeeRun() {
         <h2 className="font-display text-2xl font-black uppercase mb-6">
           Trasee<span className="text-trail">.</span>
         </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {coffeeRunRoutes6Dec.map((r) => (
             <MiniRouteCard key={r.name} route={r} accent="text-[#AC0000]" />
           ))}
