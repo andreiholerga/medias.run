@@ -413,19 +413,49 @@ export function Dashboard({ data }) {
 }
 
 // ---------- page ----------
+const PW_KEY = "stats-pw";
+const readPw = () => {
+  try {
+    return sessionStorage.getItem(PW_KEY) || "";
+  } catch {
+    return "";
+  }
+};
+
 export default function Statistici() {
+  const [password, setPassword] = useState(readPw);
+  const [input, setInput] = useState("");
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
+  const [wrong, setWrong] = useState(false);
+
+  const logout = useCallback(() => {
+    try {
+      sessionStorage.removeItem(PW_KEY);
+    } catch {}
+    setPassword("");
+    setData(null);
+  }, []);
 
   const load = useCallback(() => {
-    fetch("/api/history")
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
+    if (!password) return;
+    fetch("/api/history", { headers: { Authorization: `Bearer ${password}` } })
+      .then((r) => {
+        if (r.status === 401) throw new Error("auth");
+        return r.ok ? r.json() : Promise.reject(new Error("api"));
+      })
       .then((d) => {
         setData(d);
         setError(false);
+        setWrong(false);
       })
-      .catch(() => setError(true));
-  }, []);
+      .catch((e) => {
+        if (e.message === "auth") {
+          logout();
+          setWrong(true);
+        } else setError(true);
+      });
+  }, [password, logout]);
 
   useEffect(() => {
     document.title = "Statistici vizite";
@@ -433,13 +463,57 @@ export default function Statistici() {
     meta.name = "robots";
     meta.content = "noindex";
     document.head.appendChild(meta);
+    return () => meta.remove();
+  }, []);
+
+  useEffect(() => {
     load();
+    if (!password) return;
     const id = setInterval(load, 60000);
-    return () => {
-      clearInterval(id);
-      meta.remove();
-    };
-  }, [load]);
+    return () => clearInterval(id);
+  }, [load, password]);
+
+  function submit(e) {
+    e.preventDefault();
+    if (!input) return;
+    try {
+      sessionStorage.setItem(PW_KEY, input);
+    } catch {}
+    setWrong(false);
+    setPassword(input);
+    setInput("");
+  }
+
+  if (!password) {
+    return (
+      <main className="bg-ink text-paper min-h-[70vh] flex items-center justify-center px-5">
+        <form onSubmit={submit} className="w-full max-w-sm bg-ink-light border border-paper/10 p-8">
+          <h1 className="font-display text-3xl font-black uppercase mb-6">
+            Statistici <span className="text-trail-light">vizite</span>
+          </h1>
+          <label htmlFor="pw" className="block text-xs font-display font-bold tracking-[0.2em] uppercase text-paper/50 mb-2">
+            Parolă
+          </label>
+          <input
+            id="pw"
+            type="password"
+            autoFocus
+            autoComplete="current-password"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="w-full bg-ink border border-paper/20 px-4 py-3 text-paper focus:border-trail-light outline-none mb-4"
+          />
+          {wrong && <p className="text-sm text-trail-light mb-4">Parolă greșită.</p>}
+          <button
+            type="submit"
+            className="w-full bg-trail text-paper font-display font-bold uppercase tracking-wide py-3 hover:bg-trail-light transition-colors"
+          >
+            Intră
+          </button>
+        </form>
+      </main>
+    );
+  }
 
   return (
     <main className="bg-ink text-paper min-h-screen">
@@ -453,12 +527,20 @@ export default function Statistici() {
               Din {fDayLong(START)} · se actualizează automat la 60 de secunde
             </p>
           </div>
-          <button
-            onClick={load}
-            className="px-5 py-2.5 bg-paper/10 hover:bg-trail text-paper font-display font-bold uppercase tracking-wide text-sm transition-colors"
-          >
-            Reîmprospătează
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={load}
+              className="px-5 py-2.5 bg-paper/10 hover:bg-trail text-paper font-display font-bold uppercase tracking-wide text-sm transition-colors"
+            >
+              Reîmprospătează
+            </button>
+            <button
+              onClick={logout}
+              className="px-5 py-2.5 bg-paper/10 hover:bg-paper/20 text-paper font-display font-bold uppercase tracking-wide text-sm transition-colors"
+            >
+              Ieșire
+            </button>
+          </div>
         </div>
 
         {error && (
