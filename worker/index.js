@@ -1,4 +1,5 @@
 const TZ = "Europe/Bucharest";
+const DASHBOARD_START = "2026-11-12";
 const BOT_RE = /bot|crawler|spider|crawling|headless|preview|facebookexternalhit|slurp/i;
 
 // "YYYY-MM-DD" în ora României (nu UTC), ca "azi" să se schimbe la miezul nopții local
@@ -66,6 +67,19 @@ export default {
     // Doar citire
     if (url.pathname === "/api/stats" && request.method === "GET") {
       return json(await getStats(env, today), { headers: { "cache-control": "public, max-age=60" } });
+    }
+
+    // Zilele de la data de start a dashboard-ului (pentru pagina /statistici)
+    if (url.pathname === "/api/history" && request.method === "GET") {
+      const { results } = await env.DB.prepare(
+        "SELECT day, views FROM daily_views WHERE day >= ?1 ORDER BY day",
+      )
+        .bind(DASHBOARD_START)
+        .all();
+      return json(
+        { start: DASHBOARD_START, today, rows: results },
+        { headers: { "cache-control": "public, max-age=60" } },
+      );
     }
 
     return json({ error: "not found" }, { status: 404 });

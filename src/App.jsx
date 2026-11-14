@@ -16,6 +16,7 @@ import MediasSummerTrails from "./pages/MediasSummerTrails.jsx";
 import BinderbubiRunHike from "./pages/BinderbubiRunHike.jsx";
 import Provocare from "./pages/Provocare.jsx";
 import CoffeeRun2 from "./pages/CoffeeRun2.jsx";
+import Statistici from "./pages/Statistici.jsx"
 
 export default function App() {
   return (
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="/politica-confidentialitate" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/provocare" element={<Provocare />} />
+            <Route path="/statistici" element={<Statistici />} />
           </Routes>
         </main>
         
