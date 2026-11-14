@@ -1,5 +1,5 @@
 // Pure functions: turn daily rows from /api/history into series, buckets and derived stats.
-export const START = "2026-11-12";
+export const START = "2026-05-15";
 
 const DAY = 86400000;
 const toDate = (s) => new Date(s + "T00:00:00Z");
