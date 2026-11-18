@@ -4,3 +4,4 @@ dist
 .wrangler
 ./istoric.sql
 ./scripts
+.vscode
