@@ -1,5 +1,5 @@
 const TZ = "Europe/Bucharest";
-const DASHBOARD_START = "2026-05-15";
+const DASHBOARD_START = "2026-11-12";
 const BOT_RE = /bot|crawler|spider|crawling|headless|preview|facebookexternalhit|slurp/i;
 
 // "YYYY-MM-DD" în ora României (nu UTC), ca "azi" să se schimbe la miezul nopții local
@@ -87,13 +87,16 @@ export default {
       if (!(await isAuthorized(request, env))) {
         return json({ error: "unauthorized" }, { status: 401, headers: { "cache-control": "no-store" } });
       }
+      // ?from=AAAA-LL-ZZ: întoarce doar zilele de la data aceea încolo (clientul ține restul în cache)
+      const from = url.searchParams.get("from");
+      const since = from && /^\d{4}-\d{2}-\d{2}$/.test(from) && from > DASHBOARD_START ? from : DASHBOARD_START;
       const { results } = await env.DB.prepare(
         "SELECT day, views FROM daily_views WHERE day >= ?1 ORDER BY day",
       )
-        .bind(DASHBOARD_START)
+        .bind(since)
         .all();
       return json(
-        { start: DASHBOARD_START, today, rows: results },
+        { start: DASHBOARD_START, today, from: since, rows: results },
         { headers: { "cache-control": "private, no-store" } },
       );
     }

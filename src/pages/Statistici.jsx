@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { buildSeries, bucketize, computeStats, movingAverage, periodEnd, START } from "../lib/stats.js";
+import { addDays, buildSeries, bucketize, computeStats, movingAverage, periodEnd, START } from "../lib/stats.js";
 
 // ---------- formatting ----------
 const nf = (n, d = 1) => Number(n).toLocaleString("ro-RO", { maximumFractionDigits: d });
@@ -414,6 +414,28 @@ export function Dashboard({ data }) {
 
 // ---------- page ----------
 const PW_KEY = "stats-pw";
+
+// Cache local: zilele încheiate nu se mai schimbă, deci le păstrăm în browser și cerem serverului doar ce lipsește.
+// Cheia conține START, deci dacă schimbi data de start, cache-ul vechi nu se mai folosește.
+const CACHE_KEY = `stats-cache:v1:${START}`;
+const readCache = () => {
+  try {
+    const c = JSON.parse(localStorage.getItem(CACHE_KEY));
+    return c && c.through && c.days ? c : null;
+  } catch {
+    return null;
+  }
+};
+const writeCache = (c) => {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(c));
+  } catch {}
+};
+const clearCache = () => {
+  try {
+    localStorage.removeItem(CACHE_KEY);
+  } catch {}
+};
 const readPw = () => {
   try {
     return sessionStorage.getItem(PW_KEY) || "";
@@ -428,24 +450,37 @@ export default function Statistici() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [wrong, setWrong] = useState(false);
+  const [info, setInfo] = useState(null); // { cached, fetched }
 
   const logout = useCallback(() => {
     try {
       sessionStorage.removeItem(PW_KEY);
     } catch {}
+    clearCache(); // pe un calculator străin nu rămân datele după ieșire
     setPassword("");
     setData(null);
+    setInfo(null);
   }, []);
 
   const load = useCallback(() => {
     if (!password) return;
-    fetch("/api/history", { headers: { Authorization: `Bearer ${password}` } })
+    const cached = readCache();
+    const from = cached ? addDays(cached.through, 1) : START; // cerem doar zilele care nu sunt în cache
+    fetch(`/api/history?from=${from}`, { headers: { Authorization: `Bearer ${password}` } })
       .then((r) => {
         if (r.status === 401) throw new Error("auth");
         return r.ok ? r.json() : Promise.reject(new Error("api"));
       })
       .then((d) => {
-        setData(d);
+        const days = { ...(cached ? cached.days : {}) };
+        for (const r of d.rows) if (r.day < d.today) days[r.day] = r.views; // doar zile încheiate
+        const through = addDays(d.today, -1);
+        if (through >= START) writeCache({ through, days });
+        const rows = Object.entries(days).map(([day, views]) => ({ day, views }));
+        const todayRow = d.rows.find((r) => r.day === d.today);
+        if (todayRow) rows.push(todayRow); // ziua de azi nu se pune în cache
+        setData({ start: d.start, today: d.today, rows });
+        setInfo({ cached: cached ? Object.keys(cached.days).length : 0, fetched: d.rows.length });
         setError(false);
         setWrong(false);
       })
@@ -456,6 +491,11 @@ export default function Statistici() {
         } else setError(true);
       });
   }, [password, logout]);
+
+  const reloadAll = useCallback(() => {
+    clearCache();
+    load();
+  }, [load]);
 
   useEffect(() => {
     document.title = "Statistici vizite";
@@ -469,8 +509,18 @@ export default function Statistici() {
   useEffect(() => {
     load();
     if (!password) return;
-    const id = setInterval(load, 60000);
-    return () => clearInterval(id);
+    // nu reîmprospătăm cât timp tab-ul e ascuns; la revenire încărcăm imediat
+    const id = setInterval(() => {
+      if (!document.hidden) load();
+    }, 60000);
+    const onVisible = () => {
+      if (!document.hidden) load();
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => {
+      clearInterval(id);
+      document.removeEventListener("visibilitychange", onVisible);
+    };
   }, [load, password]);
 
   function submit(e) {
@@ -526,6 +576,11 @@ export default function Statistici() {
             <p className="text-paper/50 mt-2 text-sm">
               Din {fDayLong(START)} · se actualizează automat la 60 de secunde
             </p>
+            {info && (
+              <p className="text-paper/35 mt-1 text-xs font-mono">
+                din cache: {info.cached} zile · citite acum de pe server: {info.fetched}
+              </p>
+            )}
           </div>
           <div className="flex gap-2">
             <button
@@ -533,6 +588,13 @@ export default function Statistici() {
               className="px-5 py-2.5 bg-paper/10 hover:bg-trail text-paper font-display font-bold uppercase tracking-wide text-sm transition-colors"
             >
               Reîmprospătează
+            </button>
+            <button
+              onClick={reloadAll}
+              title="Șterge cache-ul local și citește din nou toate zilele"
+              className="px-5 py-2.5 bg-paper/10 hover:bg-paper/20 text-paper font-display font-bold uppercase tracking-wide text-sm transition-colors"
+            >
+              Reîncarcă tot
             </button>
             <button
               onClick={logout}
