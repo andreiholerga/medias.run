@@ -1,5 +1,5 @@
 const TZ = "Europe/Bucharest";
-const DASHBOARD_START = "2026-11-12";
+const DASHBOARD_START = "2026-05-15";
 const BOT_RE = /bot|crawler|spider|crawling|headless|preview|facebookexternalhit|slurp/i;
 
 // "YYYY-MM-DD" în ora României (nu UTC), ca "azi" să se schimbe la miezul nopții local

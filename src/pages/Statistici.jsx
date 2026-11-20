@@ -451,6 +451,7 @@ export default function Statistici() {
   const [error, setError] = useState(false);
   const [wrong, setWrong] = useState(false);
   const [info, setInfo] = useState(null); // { cached, fetched }
+  const [startMismatch, setStartMismatch] = useState(null); // data de start din Worker, dacă diferă de cea din pagină
 
   const logout = useCallback(() => {
     try {
@@ -472,10 +473,18 @@ export default function Statistici() {
         return r.ok ? r.json() : Promise.reject(new Error("api"));
       })
       .then((d) => {
+        // Data de start din Worker s-a schimbat față de cea cu care a fost făcut cache-ul: cache-ul poate avea găuri, îl refacem.
+        if (cached && cached.serverStart !== d.start) {
+          clearCache();
+          return load();
+        }
+        // Worker-ul pornește de la altă dată decât pagina (de ex. un fișier nu a fost redeployat): nu salvăm nimic în cache.
+        const mismatch = d.start !== START;
+        setStartMismatch(mismatch ? d.start : null);
         const days = { ...(cached ? cached.days : {}) };
         for (const r of d.rows) if (r.day < d.today) days[r.day] = r.views; // doar zile încheiate
         const through = addDays(d.today, -1);
-        if (through >= START) writeCache({ through, days });
+        if (!mismatch && through >= START) writeCache({ through, days, serverStart: d.start });
         const rows = Object.entries(days).map(([day, views]) => ({ day, views }));
         const todayRow = d.rows.find((r) => r.day === d.today);
         if (todayRow) rows.push(todayRow); // ziua de azi nu se pune în cache
@@ -605,6 +614,13 @@ export default function Statistici() {
           </div>
         </div>
 
+        {startMismatch && (
+          <p className="bg-gold/20 border border-gold p-4 text-sm mb-6">
+            Data de start din Worker (<b>{startMismatch}</b>) nu este aceeași cu cea din pagină (<b>{START}</b>), deci pot lipsi zile.
+            Pune aceeași dată în <code>DASHBOARD_START</code> (worker/index.js) și în <code>START</code> (src/lib/stats.js)
+            și redeployează.
+          </p>
+        )}
         {error && (
           <p className="bg-trail/20 border border-trail p-4 text-sm mb-6">
             Nu am putut încărca datele. API-ul există doar pe Cloudflare sau local în <code>wrangler dev</code>.
